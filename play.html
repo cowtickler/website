@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- To allow an externally hosted game later, add its origin to frame-src (and to externalOrigins in js/config.js). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Play · ArcadeHub</title>
+  <meta name="theme-color" content="#0b0e14">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/games.js" defer></script>
+  <script src="js/player.js" defer></script>
+</head>
+<body class="page-play">
+  <nav class="play-bar" aria-label="Game">
+    <a class="icon-btn" id="back-btn" href="index.html" aria-label="Back to games" title="Back to games">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg>
+    </a>
+    <button class="icon-btn" type="button" id="fullscreen-btn" aria-label="Fullscreen" title="Fullscreen" hidden>
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+    </button>
+  </nav>
+
+  <main class="player-stage" id="player-stage" tabindex="-1">
+    <h1 class="visually-hidden" id="game-title">Game</h1>
+    <div class="player-frame-wrap" id="frame-wrap"></div>
+
+    <div class="player-overlay" id="player-loading" role="status">
+      <span class="spinner" aria-hidden="true"></span>
+      <span class="visually-hidden">Loading game</span>
+    </div>
+
+    <div class="player-overlay" id="player-error" role="alert" hidden>
+      <p id="player-error-text">This game could not be loaded.</p>
+      <div class="overlay-actions">
+        <button class="text-btn" type="button" id="error-retry">Try again</button>
+        <a class="text-btn" href="index.html">Back to games</a>
+      </div>
+    </div>
+
+    <button class="icon-btn fs-exit" type="button" id="fs-exit" aria-label="Exit fullscreen" title="Exit fullscreen">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>
+    </button>
+  </main>
+</body>
+</html>

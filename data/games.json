@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 1,
+  "categories": [
+    {
+      "id": "action",
+      "name": "Action"
+    },
+    {
+      "id": "arcade",
+      "name": "Arcade"
+    },
+    {
+      "id": "racing",
+      "name": "Racing"
+    },
+    {
+      "id": "puzzle",
+      "name": "Puzzle"
+    },
+    {
+      "id": "platformer",
+      "name": "Platformer"
+    },
+    {
+      "id": "sports",
+      "name": "Sports"
+    },
+    {
+      "id": "strategy",
+      "name": "Strategy"
+    },
+    {
+      "id": "multiplayer",
+      "name": "Multiplayer"
+    }
+  ],
+  "games": [
+    {
+      "categories": [
+        "puzzle"
+      ],
+      "tags": [
+        "numbers",
+        "tiles",
+        "classic"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Arrow keys / WASD",
+          "action": "Slide tiles"
+        },
+        {
+          "keys": "Swipe",
+          "action": "Slide tiles on touchscreens"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-08",
+      "status": "ready",
+      "id": "2048",
+      "title": "2048",
+      "description": "Slide numbered tiles on a 4x4 grid and merge matching numbers to reach the 2048 tile.",
+      "thumbnail": "assets/thumbnails/2048.webp",
+      "entry": "games/2048/index.html",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": false,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "light",
+        "lowEnd": "good",
+        "notes": "Saves your best score and current game in this browser."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "Gabriele Cirulli",
+        "authorUrl": "https://github.com/gabrielecirulli",
+        "repository": "https://github.com/gabrielecirulli/2048",
+        "license": "MIT",
+        "licenseUrl": "games/2048/LICENSE.txt"
+      }
+    },
+    {
+      "categories": [
+        "strategy"
+      ],
+      "tags": [
+        "board game",
+        "ai",
+        "classic"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Click / tap",
+          "action": "Select a piece, then its destination"
+        },
+        {
+          "keys": "Drag",
+          "action": "Move a piece (mouse)"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-08",
+      "status": "ready",
+      "id": "chess",
+      "title": "Chess",
+      "description": "Play chess against the GarboChess computer opponent. Choose your color and how long the computer thinks per move.",
+      "thumbnail": "assets/thumbnails/chess.webp",
+      "entry": "games/chess/index.html",
+      "input": {
+        "keyboard": false,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "fair",
+        "notes": "The computer opponent uses the processor while thinking; lower the time per move on slow devices."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "Attogram Project (engine: GarboChess by Gary Linscott)",
+        "authorUrl": "https://github.com/attogram",
+        "repository": "https://github.com/attogram/chess",
+        "license": "MIT",
+        "licenseUrl": "games/chess/LICENSE.txt"
+      }
+    },
+    {
+      "categories": [
+        "puzzle"
+      ],
+      "tags": [
+        "mines",
+        "classic",
+        "retro"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Click",
+          "action": "Reveal a cell"
+        },
+        {
+          "keys": "Shift + click",
+          "action": "Place or remove a flag"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-08",
+      "status": "ready",
+      "id": "minesweeper",
+      "title": "Minesweeper",
+      "description": "Clear the board without hitting a mine, in a Windows 95 style.",
+      "thumbnail": "assets/thumbnails/minesweeper.webp",
+      "entry": "games/minesweeper/index.html",
+      "input": {
+        "keyboard": false,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "light",
+        "lowEnd": "good",
+        "notes": "Flagging needs Shift + click, so touch-only devices cannot place flags."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "Nick Arocho",
+        "authorUrl": "https://github.com/nickarocho",
+        "repository": "https://github.com/nickarocho/minesweeper",
+        "license": "None stated"
+      }
+    },
+    {
+      "categories": [
+        "arcade"
+      ],
+      "tags": [
+        "maze",
+        "retro",
+        "classic"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Arrow keys",
+          "action": "Move"
+        },
+        {
+          "keys": "P",
+          "action": "Pause"
+        },
+        {
+          "keys": "On-screen arrows",
+          "action": "Move on touchscreens"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-08",
+      "status": "ready",
+      "id": "pacman",
+      "title": "Pac-Man",
+      "description": "Guide Pac-Man around the maze, eat every pellet and avoid the ghosts.",
+      "thumbnail": "assets/thumbnails/pacman.webp",
+      "entry": "games/pacman/index.html",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": false,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "Has sound effects."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "Lucio Panepinto",
+        "authorUrl": "https://github.com/luciopanepinto",
+        "repository": "https://github.com/luciopanepinto/pacman",
+        "license": "GPL-3.0",
+        "licenseUrl": "games/pacman/LICENSE.txt"
+      }
+    },
+    {
+      "id": "neon-snake",
+      "title": "Neon Snake",
+      "description": "Steer a glowing snake around the grid, eat the orbs and grow as long as you can. The snake speeds up with every bite, so plan your turns before you box yourself in.",
+      "categories": [
+        "arcade"
+      ],
+      "tags": [
+        "snake",
+        "classic",
+        "retro",
+        "casual",
+        "single player"
+      ],
+      "thumbnail": "assets/thumbnails/neon-snake.webp",
+      "entry": "games/neon-snake/index.html",
+      "aspectRatio": "3:4",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": false,
+        "gamepad": false
+      },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Arrow keys / WASD",
+          "action": "Steer the snake"
+        },
+        {
+          "keys": "Space / P",
+          "action": "Pause or resume"
+        },
+        {
+          "keys": "R",
+          "action": "Restart"
+        },
+        {
+          "keys": "Swipe / arrow pad",
+          "action": "Steer on touchscreens"
+        }
+      ],
+      "compatibility": {
+        "performance": "light",
+        "lowEnd": "good",
+        "notes": "Redraws only when the snake moves and stops all work while paused, so it stays smooth on low-end Chromebooks."
+      },
+      "isolation": "standard",
+      "source": {
+        "type": "original",
+        "author": "ArcadeHub",
+        "license": "MIT",
+        "licenseUrl": "games/neon-snake/LICENSE.txt"
+      },
+      "added": "2026-10-08",
+      "status": "ready"
+    },
+    {
+      "categories": [
+        "platformer",
+        "puzzle",
+        "multiplayer"
+      ],
+      "tags": [
+        "flash",
+        "two-player",
+        "co-op",
+        "classic"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Arrow keys",
+          "action": "Move Fireboy"
+        },
+        {
+          "keys": "W A D",
+          "action": "Move Watergirl"
+        },
+        {
+          "keys": "Mouse",
+          "action": "Menus"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-08",
+      "status": "ready",
+      "id": "fireboy-watergirl",
+      "title": "Fireboy & Watergirl",
+      "description": "Fireboy & Watergirl in the Forest Temple: guide both characters to the exits together. Two players can share one keyboard.",
+      "thumbnail": "assets/thumbnails/fireboy-watergirl.webp",
+      "entry": "games/fireboy-watergirl/index.html",
+      "input": {
+        "keyboard": true,
+        "touch": false,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "Original Flash game played with Ruffle, which loads from unpkg.com, so it needs an internet connection. Keyboard required."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "Oslo Albet (published by Armor Games, 2009)",
+        "license": "Proprietary (no license; copyrighted commercial game)"
+      }
+    }
+  ]
+}

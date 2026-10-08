@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neon Snake</title>
+  <meta name="description" content="Neon Snake, an original HTML5 snake game.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-state="ready">
+  <main class="game" id="game">
+    <header class="hud">
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">Score</span>
+          <span class="stat-value" id="score">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Best</span>
+          <span class="stat-value" id="best">0</span>
+        </div>
+      </div>
+      <div class="hud-actions">
+        <button class="hud-btn" type="button" id="pause-btn" aria-label="Pause" title="Pause (P)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path id="pause-icon" d="M8 5v14M16 5v14"/></svg>
+        </button>
+        <button class="hud-btn hud-btn-text" type="button" id="restart-btn" title="Restart (R)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.35-5.65M4 4v4.5h4.5"/></svg>
+          <span>Restart</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="board" id="board">
+      <canvas id="canvas" role="img" aria-label="Snake game board"></canvas>
+      <div class="overlay" id="overlay">
+        <div class="overlay-card">
+          <h1 id="overlay-title">Neon Snake</h1>
+          <p id="overlay-text" aria-live="polite">Eat the glowing orbs to grow. Don’t hit the walls or your own tail.</p>
+          <button class="play-btn" type="button" id="overlay-btn">Play</button>
+          <p class="overlay-hint">
+            <span class="hint-keys">Arrow keys or WASD to steer · Space to pause</span>
+            <span class="hint-touch">Swipe on the board or use the arrow pad</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dpad" id="dpad" role="group" aria-label="Direction pad">
+      <button type="button" class="dpad-btn dpad-up" data-dir="up" aria-label="Up">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>
+      </button>
+      <button type="button" class="dpad-btn dpad-left" data-dir="left" aria-label="Left">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
+      <button type="button" class="dpad-btn dpad-down" data-dir="down" aria-label="Down">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <button type="button" class="dpad-btn dpad-right" data-dir="right" aria-label="Right">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

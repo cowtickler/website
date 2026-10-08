@@ -7,7 +7,7 @@
 window.ArcadeHub = window.ArcadeHub || {};
 
 window.ArcadeHub.config = {
-  siteName: 'ArcadeHub',
+  siteName: 'cowticklers games',
 
   // Catalog of every game. Paths are relative to the site root, so the site
   // works at https://username.github.io/repository-name/.

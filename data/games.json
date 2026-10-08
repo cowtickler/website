@@ -404,6 +404,59 @@
         "author": "Oslo Albet",
         "license": "Proprietary (no license; copyrighted commercial game)"
       }
+    },
+    {
+      "categories": [
+        "action",
+        "arcade"
+      ],
+      "tags": [
+        "runner",
+        "3d",
+        "endless"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Left / Right arrows",
+          "action": "Change lanes"
+        },
+        {
+          "keys": "Space",
+          "action": "Jump"
+        },
+        {
+          "keys": "Down arrow",
+          "action": "Duck"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-08",
+      "status": "ready",
+      "id": "subway-surf",
+      "title": "Subway Surf",
+      "description": "A 3D runner made with WebGL: switch lanes, jump and duck past trains and barriers while the police chase you.",
+      "thumbnail": "assets/thumbnails/subway-surf.webp",
+      "entry": "games/subway-surf/index.html",
+      "aspectRatio": "4:3",
+      "input": {
+        "keyboard": true,
+        "touch": false,
+        "mouse": false,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "Needs WebGL and a keyboard. A fan-made replica of Subway Surfers, written as a student project; not the official game."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "Vaibhav Garg",
+        "license": "None stated"
+      }
     }
   ]
 }

@@ -28,6 +28,7 @@ downtexture = '';
 endtexture = '';
 flashTime = 0;
 totalTime = 0;
+gameState = 'ready';  // ArcadeHub: 'ready' (start screen), 'playing' or 'over'
 
 main();
 
@@ -39,22 +40,49 @@ function main() {
   const canvas = document.querySelector('#glcanvas');
   const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
   if (!gl) {
-    alert('Unable to initialize WebGL. Your browser or machine may not support it.');
+    showMessage('WebGL could not start, so this game cannot run in this browser. Turn on hardware acceleration in the browser settings, or try another browser.');  // ArcadeHub: was alert()
     return;
   }
-  groundtexture = loadTexture(gl, '../static/ground.jpg');
-  walltexture = loadTexture(gl, '../static/wall.jpg');
-  woodtexture = loadTexture(gl, '../static/wood.jpg');
-  metaltexture = loadTexture(gl, '../static/tracks.jpg');
-  traintexture = loadTexture(gl, '../static/train.jpg');
-  skytexture = loadTexture(gl, '../static/sky.jpg');
-  redtexture = loadTexture(gl, '../static/red.jpeg');
-  bluetexture = loadTexture(gl, '../static/blue.jpg');
-  goldtexture = loadTexture(gl, '../static/gold.jpg');
-  downtexture = loadTexture(gl, '../static/down.jpg')
-  endtexture = loadTexture(gl, '../static/end.jpg')
+  groundtexture = loadTexture(gl, 'static/ground.jpg');
+  walltexture = loadTexture(gl, 'static/wall.jpg');
+  woodtexture = loadTexture(gl, 'static/wood.jpg');
+  metaltexture = loadTexture(gl, 'static/tracks.jpg');
+  traintexture = loadTexture(gl, 'static/train.jpg');
+  skytexture = loadTexture(gl, 'static/sky.jpg');
+  redtexture = loadTexture(gl, 'static/red.jpeg');
+  bluetexture = loadTexture(gl, 'static/blue.jpg');
+  goldtexture = loadTexture(gl, 'static/gold.jpg');
+  downtexture = loadTexture(gl, 'static/down.jpg')
+  endtexture = loadTexture(gl, 'static/end.jpg')
   
   initBuffers(gl);
+
+  // ArcadeHub: place the camera now, so the scene shows behind the start screen
+  // (tickElements() sets it on every frame once the run starts).
+  cameraPos=[surfer.position[0], Math.max(surfer.position[1]+1.5, 1.3), surfer.position[2]+6.0];
+
+  // ArcadeHub: this listener used to be added inside tickElements(), which
+  // registered another copy every frame. It is registered once here.
+  document.addEventListener('keydown', function(event) {
+    if(event.keyCode == 37 || event.keyCode == 39 || event.keyCode == 32 || event.keyCode == 40){
+      event.preventDefault();  // ArcadeHub: keep the arrows and Space from scrolling the page
+    }
+    if(gameState != 'playing'){
+      return;
+    }
+    if(event.keyCode == 37) {
+        surfer.moveLeft();
+    }
+    else if(event.keyCode == 39) {
+        surfer.moveRight();
+    }
+    else if(event.keyCode == 32){
+    	surfer.jump();
+    }
+    else if(event.keyCode == 40){
+    	surfer.duck();
+    }
+  });
 
   var then = 0;
   resetsources(gl);
@@ -64,7 +92,13 @@ function main() {
     const deltaTime = now - then;
     then = now;
 
-    tickElements(gl);
+    // ArcadeHub: the run waits for the start screen and stops at game over.
+    if(gameState == 'playing'){
+      tickElements(gl);
+    }
+    if(gameState == 'over'){
+      return;
+    }
 
     drawScene(gl, deltaTime);
 
@@ -252,8 +286,8 @@ function tickElements(gl) {
   
   totalTime++;
   if(totalTime>4950){
-  	document.getElementById("sc").innerHTML+="The End";
-  	sleep(100);
+  	gameOver(true);  // ArcadeHub: end of the run (was sleep(100), which is not defined)
+  	return;
   }		
 
   surfer.tick();
@@ -266,7 +300,8 @@ function tickElements(gl) {
   police.tick(surfer.position[0]);
 
   if(police.position[2]-surfer.position[2] < 2 && Math.abs(police.position[1] - surfer.position[1])<0.2){
-  	sleep(100);
+  	gameOver(false);  // ArcadeHub: was sleep(100)
+  	return;
   }
 
   if(police.position[2]-surfer.position[2] < 6){
@@ -292,33 +327,21 @@ function tickElements(gl) {
     }
   }
 
-  document.getElementById("sc").innerHTML = "Score: "+Score;
+  document.getElementById("sc").textContent = "Score: "+Score;
 
-	document.addEventListener('keydown', function(event) {
-	    if(event.keyCode == 37) {
-	        surfer.moveLeft();
-      }
-	    else if(event.keyCode == 39) {
-	        surfer.moveRight();
-	    }
-	    else if(event.keyCode == 32){
-	    	surfer.jump();
-	    }
-	    else if(event.keyCode == 40){
-	    	surfer.duck();
-	    }
-	});
 
 	for(var i=0;i<numOfDownboards;i++){
 		if(((downboardarr[i].position[0]-surfer.position[0])**2 + 
 			(downboardarr[i].position[1]-0.5-surfer.position[1])**2 + 
 			(downboardarr[i].position[2]-surfer.position[2])**2 <0.4) && surfer.position[2]>downboardarr[i].position[2]){
-			sleep(100);
+			gameOver(false);  // ArcadeHub: was sleep(100)
+			return;
 		}
 		if(((upboardarr[i].position[0]-surfer.position[0])**2 +
 			(upboardarr[i].position[1]-surfer.position[1])**2 +
 			(upboardarr[i].position[2]-surfer.position[2])**2 <2.0) && surfer.position[2]>upboardarr[i].position[2]){
-			sleep(100);
+			gameOver(false);  // ArcadeHub: was sleep(100)
+			return;
 		}
 	    if(((conesarr[i].position[0]-surfer.position[0])**2 + 
 	    	(conesarr[i].position[1]-surfer.position[1])**2 + 
@@ -328,7 +351,8 @@ function tickElements(gl) {
 	    if(((trainarr[i].position[0]-surfer.position[0])**2 + 
 	    	(trainarr[i].position[1]-surfer.position[1])**2 <0.3) && surfer.position[2]-trainarr[i].position[2]<10.0 
 	    	&& surfer.position[2]>trainarr[i].position[2]){
-	      sleep(100);
+	      gameOver(false);  // ArcadeHub: was sleep(100)
+	      return;
 	    }
 	}
 

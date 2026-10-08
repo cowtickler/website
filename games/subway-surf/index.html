@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>Subway Surf</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- The original page used Bootstrap and jQuery from CDNs for its layout.
+       ArcadeHub replaced them with style.css and arcadehub.js; the game code in
+       src/ is the original apart from the fixes listed in ARCADEHUB_NOTES.md. -->
+  <div class="ss-stage" id="ss-stage">
+    <canvas id="glcanvas" width="640" height="480"></canvas>
+
+    <div class="ss-hud">
+      <span class="ss-score" id="sc">Score: 0</span>
+      <span class="ss-buttons">
+        <button type="button" class="ss-btn" id="ss-gray">Grayscale?</button>
+        <button type="button" class="ss-btn" id="ss-texture">Textured?</button>
+      </span>
+    </div>
+
+    <div class="ss-overlay" id="ss-overlay">
+      <div class="ss-panel">
+        <h1 class="ss-title" id="ss-title">Subway Surf</h1>
+        <p class="ss-text" id="ss-text">Run from the police, dodge the trains and barriers, and grab the coins.</p>
+        <p class="ss-keys" id="ss-keys">Left and Right arrows change lanes. Space jumps. Down arrow ducks.</p>
+        <button type="button" class="ss-play" id="ss-play">Play</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="arcadehub.js"></script>
+  <script src="src/gl-matrix.js"></script>
+  <script src="src/bg.js"></script>
+  <script src="src/end.js"></script>
+  <script src="src/ground.js"></script>
+  <script src="src/track.js"></script>
+  <script src="src/surfer.js"></script>
+  <script src="src/police.js"></script>
+  <script src="src/wall.js"></script>
+  <script src="src/coin.js"></script>
+  <script src="src/downboard.js"></script>
+  <script src="src/upboard.js"></script>
+  <script src="src/cones.js"></script>
+  <script src="src/fly.js"></script>
+  <script src="src/boots.js"></script>
+  <script src="src/magnet.js"></script>
+  <script src="src/train.js"></script>
+  <script src="src/sun.js"></script>
+  <script src="src/game.js"></script>
+</body>
+</html>

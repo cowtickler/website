@@ -13,7 +13,7 @@ GitHub Pages hosting with no backend and no build step.
 | Homepage: a grid of game icons, nothing else | `index.html`, `js/app.js` |
 | Player: the game fills the window, with a back button and fullscreen | `play.html?id=<game-id>`, `js/player.js` |
 | Central game catalog (validated on load; unsafe entries are skipped) | `data/games.json`, `js/games.js` |
-| Games: 2048, Chess, Minesweeper, Pac-Man, Neon Snake, Fireboy & Watergirl | `games/` |
+| Games: 2048, Chess, Minesweeper, Pac-Man, Neon Snake, Fireboy & Watergirl (Forest Temple and Light Temple), Subway Surf | `games/` |
 | Source and license notes for each game | `games/<game-id>/ARCADEHUB_NOTES.md` |
 | Catalog checker (optional, needs Node.js) | `tools/validate-catalog.mjs` |
 | Guide for adding open-source games | [`ADDING_GAMES.md`](ADDING_GAMES.md) |
@@ -27,6 +27,11 @@ Fireboy & Watergirl: Forest Temple is the original Flash game (`forest-temple.sw
 played with [Ruffle](https://ruffle.rs), which the page loads from unpkg.com, so
 it needs an internet connection. It is a copyrighted commercial game with no
 license; see `games/fireboy-watergirl/ARCADEHUB_NOTES.md`.
+
+Subway Surf is a fan-made WebGL replica of Subway Surfers, written as a student
+project by Vaibhav Garg. It has no license, its textures have no stated source,
+and "Subway Surfers" is SYBO's trademark; see
+`games/subway-surf/ARCADEHUB_NOTES.md`.
 
 ## Project structure
 

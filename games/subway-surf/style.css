@@ -1,0 +1,153 @@
+/* Subway Surf page. Replaces the Bootstrap CDN stylesheet the original used.
+   Colors match ArcadeHub's css/style.css. */
+
+:root {
+  --bg: #05070b;
+  --panel: rgba(11, 14, 20, 0.88);
+  --border: #252d3d;
+  --text: #e9edf5;
+  --text-muted: #a0a9bb;
+  --accent: #39e1b6;
+  --accent-text: #04241c;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* The game is drawn at 4:3, so the stage is the largest 4:3 box that fits. */
+.ss-stage {
+  position: relative;
+  width: min(100vw, calc(100vh * 4 / 3));
+  height: min(100vh, calc(100vw * 3 / 4));
+}
+
+#glcanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ss-hud {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  z-index: 2; /* above the start screen, so the toggles work before a run */
+  padding: 8px 10px;
+  pointer-events: none;
+}
+
+.ss-score {
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--panel);
+  font-size: clamp(14px, 2.6vmin, 22px);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.ss-buttons {
+  display: flex;
+  gap: 6px;
+  pointer-events: auto;
+}
+
+.ss-btn {
+  padding: 5px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--panel);
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.ss-btn:hover {
+  border-color: var(--accent);
+}
+
+.ss-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 16px;
+  background: rgba(5, 7, 11, 0.55);
+}
+
+.ss-panel {
+  max-width: 420px;
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+  text-align: center;
+}
+
+.ss-title {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.ss-text,
+.ss-keys {
+  margin: 0 0 10px;
+}
+
+.ss-keys {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.ss-play {
+  margin-top: 6px;
+  padding: 9px 26px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ss-btn:focus-visible,
+.ss-play:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

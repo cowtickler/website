@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Ruffle comes from unpkg.com; everything else is local. connect-src also keeps the
+       game's built-in ad loader (server.cpmstar.com) from reaching the network. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com 'wasm-unsafe-eval'; connect-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>Fireboy &amp; Watergirl: Light Temple</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="fw-bar" aria-label="Game">
+    <a class="fw-back" href="../../index.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg>
+      <span>Back to games</span>
+    </a>
+  </nav>
+
+  <main class="fw-stage">
+    <h1 class="fw-hidden">Fireboy &amp; Watergirl: Light Temple</h1>
+    <div class="fw-player" id="fw-player"></div>
+
+    <div class="fw-overlay" id="fw-loading" role="status">
+      <span class="fw-spinner" aria-hidden="true"></span>
+      <span class="fw-hidden">Loading game</span>
+    </div>
+
+    <div class="fw-overlay" id="fw-message" role="alert" hidden>
+      <p id="fw-message-text">The game could not be loaded.</p>
+      <div class="fw-actions">
+        <button class="fw-btn" type="button" id="fw-retry">Try again</button>
+        <a class="fw-btn fw-direct-only" href="../../index.html">Back to games</a>
+      </div>
+    </div>
+
+    <noscript>
+      <div class="fw-overlay">
+        <p>This game needs JavaScript turned on.</p>
+        <a class="fw-btn" href="../../index.html">Back to games</a>
+      </div>
+    </noscript>
+  </main>
+
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+  <script src="game.js"></script>
+</body>
+</html>

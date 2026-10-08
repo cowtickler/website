@@ -350,6 +350,60 @@
         "author": "Oslo Albet (published by Armor Games, 2009)",
         "license": "Proprietary (no license; copyrighted commercial game)"
       }
+    },
+    {
+      "categories": [
+        "platformer",
+        "puzzle",
+        "multiplayer"
+      ],
+      "tags": [
+        "flash",
+        "two-player",
+        "co-op",
+        "classic"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Arrow keys",
+          "action": "Move Fireboy"
+        },
+        {
+          "keys": "W A D",
+          "action": "Move Watergirl"
+        },
+        {
+          "keys": "Mouse",
+          "action": "Menus"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-08",
+      "status": "ready",
+      "id": "fireboy-watergirl-light-temple",
+      "title": "Fireboy & Watergirl: Light Temple",
+      "description": "Use Fireboy and Watergirl together to solve the Light Temple's mirror and light puzzles. Two players can share one keyboard.",
+      "thumbnail": "assets/thumbnails/fireboy-watergirl-light-temple.webp",
+      "entry": "games/fireboy-watergirl-light-temple/index.html",
+      "input": {
+        "keyboard": true,
+        "touch": false,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "Original Flash game played with Ruffle, which loads from unpkg.com, so it needs an internet connection. Keyboard required."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "Oslo Albet",
+        "license": "Proprietary (no license; copyrighted commercial game)"
+      }
     }
   ]
 }

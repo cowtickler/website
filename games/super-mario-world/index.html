@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: https://cdn.emulatorjs.org; style-src 'self' 'unsafe-inline' https://cdn.emulatorjs.org; img-src 'self' data: blob: https://cdn.emulatorjs.org https://allancoding-files.netlify.app; connect-src 'self' data: blob: https://cdn.emulatorjs.org https://allancoding-files.netlify.app; media-src 'self' data: blob:; font-src 'self' data: https://cdn.emulatorjs.org; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://allancoding-files.netlify.app; connect-src 'self' data: blob: https://allancoding-files.netlify.app; media-src 'self' data: blob:; font-src 'self' data:; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <title>Super Mario World</title>
   <style>
     html,
@@ -37,8 +37,8 @@
     window.EJS_backgroundColor = '#000';
     window.EJS_backgroundImage = 'https://allancoding-files.netlify.app/snes-nes/SMW.jpg';
     window.EJS_gameUrl = 'https://allancoding-files.netlify.app/snes-nes/SMW.smc.zip';
-    window.EJS_pathtodata = 'https://cdn.emulatorjs.org/4.2.3/data/';
+    window.EJS_pathtodata = '../../vendor/emulatorjs/data/';
   </script>
-  <script src="https://cdn.emulatorjs.org/4.2.3/data/loader.js"></script>
+  <script src="../../vendor/emulatorjs/data/loader.js"></script>
 </body>
 </html>

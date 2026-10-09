@@ -166,7 +166,8 @@ Add an object to `"games"` in `data/games.json`:
 | `aspectRatio` | optional | `"16:9"`, `"4:3"`, `"3:4"`… Letterboxes fixed-size games. Omit to fill the player. |
 | `input` | yes | What really works (keyboard, touch, mouse, gamepad). Recorded for honesty and future filters. |
 | `fullscreen` | optional | `false` hides the fullscreen button. Default `true`. |
-| `embeddable` | optional | `false` for a game whose official site does not allow it inside other websites (`X-Frame-Options`, CSP `frame-ancestors`, a script check like Cookie Clicker's, or its terms). `entry` is then the official `https://` page. The icon still opens the player, which shows the game's title, credit and a button that opens the official page in a new tab, instead of a frame. Never proxy, re-host or work around the restriction. Default `true`. |
+| `openInPlayer` | optional | `false` makes the icon open `entry` as its own page instead of in the player, for a game that refuses to run inside a frame. Never patch out the game's frame check instead. Default `true`. |
+| `embeddable` | optional | `false` for a game whose official site does not allow it inside other websites (`X-Frame-Options`, CSP `frame-ancestors`, a script check, or its terms). `entry` is then the official `https://` page. The icon still opens the player, which shows the game's title, credit and a button that opens the official page in a new tab, instead of a frame. Never proxy, re-host or work around the restriction. Default `true`. |
 | `featured` | optional | Not used right now. |
 | `popular` | optional | Not used right now. |
 | `controls` | recommended | How to play. Not shown right now; most games explain their own controls. |

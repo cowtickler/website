@@ -48,10 +48,11 @@ Do not add headers, search, categories, favorites or other UI unless asked.
 - Script order on each page: config → ui → games → page script.
 - Games with license problems wait in `_incoming/` (git-ignored, never
   published); see their `ARCADEHUB_NOTES.md`. Exception: the owner chose to
-  publish Minesweeper, Pac-Man, Fireboy & Watergirl and Subway Surf anyway
-  (2026-10-08); keep their notes.
+  publish Minesweeper, Pac-Man, Fireboy & Watergirl, Subway Surf and Cookie
+  Clicker anyway (2026-10-08); keep their notes.
+- A game that refuses to run inside a frame gets `"openInPlayer": false`
+  (it opens as its own page). Never patch out a game's frame check.
 - A game whose official site does not allow embedding gets `"embeddable":
   false` with its official URL as `entry`; the player shows a button that opens
-  it in a new tab. Never patch out a frame check, proxy, re-host or otherwise
-  work around the restriction. Subway Surfers (Poki) and Cookie Clicker work
-  this way (2026-10-09).
+  it in a new tab. Never proxy, re-host or work around the restriction.
+  Subway Surfers (Poki) works this way (2026-10-09).

@@ -468,7 +468,7 @@
         "clicker",
         "incremental"
       ],
-      "fullscreen": false,
+      "fullscreen": true,
       "featured": false,
       "popular": false,
       "controls": [
@@ -484,8 +484,8 @@
       "title": "Cookie Clicker",
       "description": "Orteil's idle game: click the big cookie, then buy grandmas, farms and factories to bake billions more.",
       "thumbnail": "assets/thumbnails/cookie-clicker.webp",
-      "entry": "https://orteil.dashnet.org/cookieclicker/",
-      "embeddable": false,
+      "entry": "games/cookie-clicker/index.html",
+      "openInPlayer": false,
       "input": {
         "keyboard": false,
         "touch": true,
@@ -495,13 +495,14 @@
       "compatibility": {
         "performance": "medium",
         "lowEnd": "unknown",
-        "notes": "Opens on orteil.dashnet.org in a new tab: the game shows \"Oops. Wrong address!\" when another website puts it in a frame. Progress is saved on the official site. Networks that block orteil.dashnet.org block the game too."
+        "notes": "Opens on its own page, because the game refuses to run inside another site's frame. Progress is saved in the browser."
       },
       "source": {
-        "type": "external",
+        "type": "third-party",
         "author": "Orteil (DashNet)",
         "authorUrl": "https://orteil.dashnet.org/",
-        "license": "Copyrighted (do not re-host)"
+        "repository": "https://github.com/ozh/cookieclicker",
+        "license": "Proprietary (author asks not to re-host)"
       }
     },
     {

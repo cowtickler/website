@@ -1,8 +1,8 @@
 /*
  * Player page (play.html?id=<game-id>).
  * Loads exactly one game into one sandboxed iframe that fills the window,
- * with a back button and fullscreen. A game framed from another website also
- * gets its title, its source and a reload button.
+ * with a back button and fullscreen. A game framed from another website, or
+ * marked "titleBar": true, also gets its title, its source and a reload button.
  */
 (function (AH) {
   'use strict';
@@ -73,6 +73,14 @@
     $('external-link').focus();
   }
 
+  function showCredit(label, text, href, title) {
+    $('play-credit-label').textContent = label;
+    $('play-source').textContent = text;
+    $('play-source').href = href;
+    $('play-source').title = title;
+    $('play-credit').hidden = false;
+  }
+
   /**
    * For a game framed from another website. The player cannot see inside a
    * page from another origin, so it cannot tell whether the game itself
@@ -81,21 +89,33 @@
    * They open source.url (the game's own page there) when it differs from the
    * framed entry, for example an embed-only page.
    */
-  function showExternalInfo() {
+  function showExternalSource() {
     var url = new URL(game.source.url || game.entry);
     var host = new URL(game.entry).host;
     var name = game.source.platform || url.host;
-    $('play-title').textContent = game.title;
-    $('play-source').textContent = name;
-    $('play-source').href = url.href;
-    $('play-source').title = 'Open ' + game.title + ' on ' + name + ' in a new tab';
-    $('play-info').hidden = false;
-    $('reload-btn').hidden = false;
+    showCredit('from', name, url.href, 'Open ' + game.title + ' on ' + name + ' in a new tab');
     $('error-original').href = url.href;
     $('error-original').hidden = false;
     $('error-note').textContent = game.title + ' loads from ' + host + '. If that site is down or ' +
       'blocked on your network (for example by a school filter), the game cannot load here or there.';
     $('error-note').hidden = false;
+  }
+
+  /**
+   * Title, source and reload button in the bar, for framed games and for
+   * local games marked "titleBar": true. A local game credits its maker,
+   * linking to their website when the catalog gives one.
+   */
+  function showGameInfo() {
+    $('play-title').textContent = game.title;
+    $('play-info').hidden = false;
+    $('reload-btn').hidden = false;
+    if (game.isExternal) {
+      showExternalSource();
+    } else if (game.source.author && game.source.authorUrl) {
+      showCredit('by', game.source.author, game.source.authorUrl,
+        'Open ' + game.source.author + '’s website in a new tab');
+    }
   }
 
   function focusGame() {
@@ -274,7 +294,7 @@
         window.location.replace(game.entry);
         return;
       }
-      if (game.isExternal) showExternalInfo();
+      if (game.titleBar) showGameInfo();
       if (game.aspectRatio) {
         var stage = $('player-stage');
         stage.classList.add('has-ratio');

@@ -32,6 +32,14 @@
     {
       "id": "multiplayer",
       "name": "Multiplayer"
+    },
+    {
+      "id": "cooking",
+      "name": "Cooking"
+    },
+    {
+      "id": "simulation",
+      "name": "Simulation"
     }
   ],
   "games": [
@@ -343,7 +351,7 @@
       "compatibility": {
         "performance": "medium",
         "lowEnd": "unknown",
-        "notes": "Original Flash game played with Ruffle, which loads from unpkg.com, so it needs an internet connection. Keyboard required."
+        "notes": "Original Flash game played with Ruffle, which is hosted on this site. Keyboard required."
       },
       "source": {
         "type": "third-party",
@@ -397,7 +405,7 @@
       "compatibility": {
         "performance": "medium",
         "lowEnd": "unknown",
-        "notes": "Original Flash game played with Ruffle, which loads from unpkg.com, so it needs an internet connection. Keyboard required."
+        "notes": "Original Flash game played with Ruffle, which is hosted on this site. Keyboard required."
       },
       "source": {
         "type": "third-party",
@@ -606,6 +614,60 @@
         "url": "https://www.y8.com/games/ball_fall_3d",
         "license": "Y8 game; embed not offered for it (owner's choice)"
       }
+    },
+    {
+      "id": "papas-freezeria",
+      "title": "Papa's Freezeria",
+      "description": "Run Papa Louie's ice cream shop on a tropical island: take orders, build and blend each sundae, add the toppings and serve it just the way the customer asked.",
+      "categories": [
+        "cooking",
+        "simulation"
+      ],
+      "tags": [
+        "flash",
+        "cooking",
+        "restaurant",
+        "ice cream",
+        "single player"
+      ],
+      "thumbnail": "assets/thumbnails/papas-freezeria.webp",
+      "entry": "games/papas-freezeria/index.html",
+      "aspectRatio": "4:3",
+      "titleBar": true,
+      "input": {
+        "keyboard": true,
+        "touch": false,
+        "mouse": true,
+        "gamepad": false
+      },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Mouse",
+          "action": "Click and drag to take orders, make sundaes and serve them"
+        },
+        {
+          "keys": "Keyboard",
+          "action": "Type your name when you start a new game"
+        }
+      ],
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "Original Flash game played with Ruffle, which is hosted on this site. Mouse required; the keyboard is only used to type a name."
+      },
+      "isolation": "standard",
+      "source": {
+        "type": "third-party",
+        "author": "Flipline Studios",
+        "authorUrl": "https://www.flipline.com/",
+        "license": "Flipline Standard Version: free to host, unaltered",
+        "licenseUrl": "games/papas-freezeria/ARCADEHUB_NOTES.md"
+      },
+      "added": "2026-10-09",
+      "status": "ready"
     }
   ]
 }

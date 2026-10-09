@@ -1,4 +1,4 @@
-/* Plays forest-temple.swf with Ruffle (loaded from unpkg.com by index.html)
+/* Plays forest-temple.swf with Ruffle (the site's copy in vendor/ruffle/, loaded by index.html)
    and shows a plain message when Ruffle or the SWF cannot be loaded. */
 (function () {
   'use strict';
@@ -32,8 +32,7 @@
   }
 
   if (!window.RufflePlayer || typeof window.RufflePlayer.newest !== 'function') {
-    showMessage('The Flash player (Ruffle) could not be loaded. Check your internet connection ' +
-      'and try again. Ruffle comes from unpkg.com, which some school or work networks block.');
+    showMessage('The Flash player (Ruffle) could not be loaded. Try again.');
     return;
   }
 

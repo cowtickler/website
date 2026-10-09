@@ -10,7 +10,7 @@ ENGINEERING.com's own page in the player; the player adds the title, a
 | Framed page | https://games.engineering.com/temple-run-2/index.html (the URL the owner supplied) |
 | Host | ENGINEERING.com's "Games & Puzzles" section (Arrowfly LLC) |
 | License | Not stated. ENGINEERING.com's terms (https://www.arrowfly.com/terms/) say its content belongs to "the Company and its licensors" and say nothing about framing. Whether Imangi licensed this copy to ENGINEERING.com is unknown |
-| Thumbnail | `assets/thumbnails/temple-run-2.webp`, original artwork drawn for this site (not Imangi's) |
+| Thumbnail | `assets/thumbnails/temple-run-2.webp`, the game's own artwork (copyrighted), supplied by the owner on 2026-10-09 and fitted to 640x360 (Imangi's app icon) |
 
 ## Can it play inside this site? Probably, but not verified here.
 

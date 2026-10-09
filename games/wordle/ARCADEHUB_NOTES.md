@@ -34,6 +34,7 @@ The upstream app is a Flask server, which GitHub Pages cannot run. `build_wordle
 - `tailwind.css` is built from the page's own HTML and JS with the default Tailwind config.
 - Keyboard: QWERTY only. The Dvorak and Alphabetical layouts and their selector need the server to save the choice, so they are not included.
 - `game.js` is upstream with the changes listed below. The MIT `LICENSE` and the upstream `README.md` are copied unchanged.
+- Practice mode (added after the first build) was edited by hand in `game.js` and `index.html`, so `build_wordle.py` no longer reproduces these two files exactly. `tailwind.css` was rebuilt from the edited files.
 
 ## Changes to upstream
 
@@ -41,6 +42,7 @@ The upstream app is a Flask server, which GitHub Pages cannot run. `build_wordle
 - Replaced the server's template values with `words.js` and the daily-word formula above.
 - Header title link (`<a href="/">`) no longer links, because inside the player it would open the GitHub Pages root. The Settings "Source Code" and "Feedback" links are plain text for the same reason: the player blocks pop-up tabs.
 - Added a Content-Security-Policy meta tag that allows only this site.
+- **Practice mode** (not in upstream): the stats window has a "Play a random word" button. The round uses a random word from the same list. Practice rounds are not saved and do not change the daily board or the stats. "New random word" starts another round, and "Today's word" returns to the daily board. The Share button is hidden in practice, because its text would show the daily number. The daily game still works as before: one word a day, the same for everyone.
 - Fixed four bugs in upstream `game.js`:
   - **Win %** divided by `(games × 100)`, so it showed `NaN%` before the first game and a wrong small number after. It is now `wins ÷ games × 100`, rounded.
   - **Share** added a new click listener every time the stats modal updated (once a second while open), so one click shared several times. It is now `onclick`, set once per update.
@@ -50,7 +52,7 @@ The upstream app is a Flask server, which GitHub Pages cannot run. `build_wordle
 
 ## Tests (setup only, no play-through)
 
-Run on the local server (`arcade.test:8123`, Chromium, `scratchpad/wordle-test.mjs`): **31 of 31 pass**.
+Run on the local server (`arcade.test:8123`, Chromium, scratchpad `wordle-test.mjs`): **31 of 31 pass**. Practice mode (scratchpad `wordle-practice-test.mjs`): **23 of 23 pass**. Both check the implementation only, not gameplay. Practice checks include: the daily board is saved and restored, practice does not write to it, a practice win does not change the stats, and the page makes no outside requests.
 
 - Catalog: entry present, `standard` isolation, relative paths; thumbnail and license file load.
 - Game page: no requests to any host other than the test server; no request failed; no console or page errors; Vue mounted; 28 keys; no layout selector; no Google Analytics, CDN or unpkg references; CSP meta present.

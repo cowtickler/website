@@ -14,6 +14,10 @@ const app = Vue.createApp({
 
             // these variables come from Jinja
             todays_word: todays_word,
+            // ArcadeHub: the daily word never changes; todays_word is the word being played
+            // (the daily word, or a random one in practice mode).
+            daily_word: todays_word,
+            practice: false,
             todays_idx: todays_idx,
             word_list: word_list,
             word_list_supplement: word_list_supplement,
@@ -342,7 +346,37 @@ const app = Vue.createApp({
                 }
             }
             this.showTiles();
-            this.saveToLocalStorage();
+            // ArcadeHub: practice rounds are not saved, so the daily board stays as it was.
+            if (!this.practice) this.saveToLocalStorage();
+        },
+        startPractice() {
+            // ArcadeHub: a new round with a random word from the list. It is not saved and does
+            // not count in the stats. The daily board is left alone.
+            this.practice = true;
+            this.todays_word = this.word_list[Math.floor(Math.random() * this.word_list.length)];
+            this.resetBoard();
+            this.show_stats_modal = false;
+        },
+        backToDaily() {
+            // ArcadeHub: back to today's word, with the board saved for it (if any).
+            this.practice = false;
+            this.todays_word = this.daily_word;
+            this.resetBoard();
+            this.loadFromLocalStorage();
+            this.show_stats_modal = false;
+        },
+        resetBoard() {
+            this.tiles = [["", "", "", "", ""], ["", "", "", "", ""], ["", "", "", "", ""], ["", "", "", "", ""], ["", "", "", "", ""], ["", "", "", "", ""]];
+            this.tile_classes = [0, 1, 2, 3, 4, 5].map(() => ["border-2 border-neutral-300", "border-2 border-neutral-300", "border-2 border-neutral-300", "border-2 border-neutral-300", "border-2 border-neutral-300"]);
+            this.key_classes = Object.fromEntries(this.characters.map(c => [c, ""]));
+            this.active_row = 0;
+            this.active_cell = 0;
+            this.full_word_inputted = false;
+            this.game_over = false;
+            this.game_won = false;
+            this.attempts = "0";
+            this.emoji_board = "⬜⬜⬜⬜⬜\n";
+            this.showTiles();
         },
         showTiles() {
             // if left to right, then reverse the tiles visuals. else copy normally.
@@ -370,7 +404,7 @@ const app = Vue.createApp({
 
             // save a win to localStorage
             const result = { "won": true, "attempts": this.attempts, "date": new Date() };
-            this.game_results[this.config.language_code].push(result);
+            if (!this.practice) this.game_results[this.config.language_code].push(result);
             localStorage.setItem("game_results", JSON.stringify(this.game_results));
             
             // refresh stats
@@ -387,7 +421,7 @@ const app = Vue.createApp({
                 this.show_stats_modal = true;
             }, 400);
             // save a loss to local storage game results
-            this.game_results[this.config.language_code].push({ "won": false, "attempts": this.attempts, "date": new Date() });
+            if (!this.practice) this.game_results[this.config.language_code].push({ "won": false, "attempts": this.attempts, "date": new Date() });
             localStorage.setItem("game_results", JSON.stringify(this.game_results));
 
             // refresh stats

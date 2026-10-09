@@ -193,6 +193,12 @@
         showError('This game is not available right now.', false);
         return;
       }
+      if (!game.openInPlayer) {
+        // This game runs on its own page, not in the player (for example a game
+        // that refuses to run inside a frame). Go there instead.
+        window.location.replace(game.entry);
+        return;
+      }
       if (game.aspectRatio) {
         var stage = $('player-stage');
         stage.classList.add('has-ratio');

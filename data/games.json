@@ -457,6 +457,53 @@
         "author": "Vaibhav Garg",
         "license": "None stated"
       }
+    },
+    {
+      "categories": [
+        "arcade",
+        "strategy"
+      ],
+      "tags": [
+        "idle",
+        "clicker",
+        "incremental"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Click / tap",
+          "action": "Bake cookies, buy buildings and upgrades"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-08",
+      "status": "ready",
+      "id": "cookie-clicker",
+      "title": "Cookie Clicker",
+      "description": "Orteil's idle game: click the big cookie, then buy grandmas, farms and factories to bake billions more.",
+      "thumbnail": "assets/thumbnails/cookie-clicker.webp",
+      "entry": "games/cookie-clicker/index.html",
+      "openInPlayer": false,
+      "input": {
+        "keyboard": false,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "Opens on its own page, because the game refuses to run inside another site's frame. Progress is saved in the browser."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "Orteil (DashNet)",
+        "authorUrl": "https://orteil.dashnet.org/",
+        "repository": "https://github.com/ozh/cookieclicker",
+        "license": "Proprietary (author asks not to re-host)"
+      }
     }
   ]
 }

@@ -5,7 +5,7 @@
 | Source | `basket-random-main.zip`, supplied by the site owner on 2026-10-09 ("Basket Random (Extra+ Mod)", from an unblocked-games repository). Its `@source.txt` shows it was downloaded from GameDistribution: https://html5.gamedistribution.com/rvvASMiM/bf1268dccb5d43e7970bb3edaa54afc8/ |
 | Author | RHM Interactive (published on twoplayergames.org and distributed by GameDistribution). Made with Construct 3 |
 | License | **None. Copyrighted game.** GameDistribution licenses it to websites only through its official embed, which shows its ads |
-| Thumbnail | `assets/thumbnails/basket-random.webp`, an original drawing made for this site (not the game's art) |
+| Thumbnail | `assets/thumbnails/basket-random.webp`, the game's own artwork (copyrighted), supplied by the owner on 2026-10-09 and fitted to 640x360 |
 
 ## Known license issues (owner chose "Host ZIP copy" on 2026-10-09)
 1. This is a ripped copy of a copyrighted game, hosted without permission. RHM Interactive or GameDistribution could send GitHub a takedown request.
@@ -21,6 +21,7 @@
 
 ## Changes made
 - `index.html`: removed the analytics script tag and added the Content-Security-Policy (both marked `ArcadeHub:`).
+- `index.html`: added a small script (marked `ArcadeHub:`) that lets the game run at most 60 times a second. The game's physics uses Construct's "fixed" stepping (1/60 s per screen refresh), so on 120 Hz and 144 Hz screens it ran 2 to 2.4 times too fast (reported by the owner, 2026-10-09). Measured with a simulated 75, 120, 144 and 165 Hz screen: 60 game ticks a second on all of them, as on a 60 Hz screen.
 - Deleted the three remote-code/analytics scripts and the ahrefs file listed above.
 - Nothing else was changed.
 

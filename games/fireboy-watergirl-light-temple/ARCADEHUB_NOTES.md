@@ -10,7 +10,7 @@
 ## Integration notes
 
 - The SWF is stored locally as `light-temple.swf`.
-- The catalog thumbnail is an original geometric title card created for this website; it does not copy artwork from the game.
+- The catalog thumbnail is the game's own artwork (copyrighted), supplied by the owner on 2026-10-09 and fitted to 640x360.
 - Ruffle networking and URL opening are disabled.
 - The page Content Security Policy blocks the game's external requests while allowing Ruffle to load.
 - The wrapper uses relative paths so it works under the GitHub Pages project URL.

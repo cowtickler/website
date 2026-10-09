@@ -26,6 +26,34 @@ window.addEventListener("keydown", function(e) {
 </head>
 <body>
 <div id="fb-root"></div>
+	<!-- ArcadeHub: the game's physics moves a fixed 1/60 s per screen refresh, so on 120 Hz or
+	     144 Hz screens it ran 2 to 2.4 times too fast. This lets the game run at most 60 times a
+	     second, like on a normal 60 Hz screen. It changes nothing on 60 Hz screens. -->
+	<script>
+	(function () {
+		var raf = window.requestAnimationFrame.bind(window);
+		var caf = window.cancelAnimationFrame.bind(window);
+		var step = 1000 / 60, next = 0, frameTime = -1, ids = {}, count = 0;
+		window.requestAnimationFrame = function (callback) {
+			var id = ++count;
+			function run(t) {
+				// Every callback of an accepted screen refresh runs; other refreshes are skipped.
+				if (t !== frameTime) {
+					if (t < next - 2) { ids[id] = raf(run); return; }
+					next = t - next < 100 ? next + step : t + step;
+					frameTime = t;
+				}
+				delete ids[id];
+				callback(t);
+			}
+			ids[id] = raf(run);
+			return id;
+		};
+		window.cancelAnimationFrame = function (id) {
+			if (id in ids) { caf(ids[id]); delete ids[id]; }
+		};
+	})();
+	</script>
 	<script src="box2d.wasm.js"></script>
 	<noscript>
 		<div id="notSupportedWrap">

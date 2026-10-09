@@ -29,7 +29,7 @@
 - Nothing else was changed.
 
 ## Other notes
-- The icon (`assets/thumbnails/cookie-clicker.webp`) is an original drawing made for this site, not the game's art.
+- The icon (`assets/thumbnails/cookie-clicker.webp`) is the game's own artwork (copyrighted), supplied by the owner on 2026-10-09 and fitted to 640x360.
 - The "Other versions" menu links ("Live version", "Try the beta!") point at folders that only exist on the official site.
 - The page is designed for a window at least 900 pixels wide.
 - The page is 8 pixels wider than the window at every size (the body's default margin), so it can shift sideways by 8 pixels. The original page does the same, so it was left alone.

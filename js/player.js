@@ -38,6 +38,40 @@
     $('player-error').hidden = false;
   }
 
+  /**
+   * For a game whose official site refuses to run inside other websites
+   * ("embeddable": false): no frame is created, and the player offers a link
+   * that opens the official game in a new tab, so this site stays open.
+   */
+  function showOfficialLink() {
+    var url = new URL(game.entry);
+    var platform = game.source.platform;
+    var by = [];
+    if (game.source.author) by.push('By ' + game.source.author);
+    if (platform) by.push('on ' + platform);
+    showLoading(false);
+    $('fullscreen-btn').hidden = true;
+    $('external-title').textContent = game.title;
+    $('external-credit').textContent = by.join(' · ');
+    $('external-credit').hidden = !by.length;
+    $('external-text').textContent = (platform
+      ? platform + ' does not allow its games to be played inside other websites, so ' +
+        game.title + ' opens on ' + platform + ' in a new tab.'
+      : game.title + '’s official website does not allow the game to be played inside ' +
+        'other websites, so it opens there in a new tab.') + ' This site stays open here.';
+    $('external-link').href = url.href;
+    $('external-link').textContent = platform ? 'Play on ' + platform : 'Open Official Game';
+    $('external-network').textContent = 'If ' + url.host + ' is blocked on your network ' +
+      '(for example by a school filter), the game will not open there either.';
+    $('external-url').textContent = url.host + url.pathname.replace(/\/$/, '');
+    if (game.thumbnail) {
+      $('external-thumb').src = game.thumbnail;
+      $('external-thumb').hidden = false;
+    }
+    $('player-external').hidden = false;
+    $('external-link').focus();
+  }
+
   function focusGame() {
     if (!frame) return;
     try {
@@ -191,6 +225,10 @@
       $('game-title').textContent = game.title;
       if (game.status !== 'ready') {
         showError('This game is not available right now.', false);
+        return;
+      }
+      if (!game.embeddable) {
+        showOfficialLink();
         return;
       }
       if (!game.openInPlayer) {

@@ -64,7 +64,8 @@ for (const g of catalog.games) {
   if (!g.title) err(`${where}: missing title`);
   if (!g.description) warn(`${where}: no description`);
 
-  if (!isLocal(g.entry) || !g.entry.startsWith('games/')) err(`${where}: entry must be a relative path inside games/`);
+  if (g.embeddable === false && /^https:\/\/[^/\s]+/.test(g.entry || '')) { /* official site, linked not framed */ }
+  else if (!isLocal(g.entry) || !g.entry.startsWith('games/')) err(`${where}: entry must be a relative path inside games/`);
   else if (!fileExists(g.entry)) err(`${where}: entry file not found: ${g.entry}`);
   else if (!g.entry.startsWith(`games/${id}/`)) warn(`${where}: entry is not inside games/${id}/ (recommended layout)`);
 
@@ -90,7 +91,7 @@ for (const g of catalog.games) {
   const src = g.source || {};
   if (!src.license) err(`${where}: source.license is required (use "review" status until it is known)`);
   if (src.type !== 'original' && !src.author) warn(`${where}: source.author missing`);
-  if (src.type !== 'original' && !src.repository) warn(`${where}: source.repository missing`);
+  if (src.type !== 'original' && g.embeddable !== false && !src.repository) warn(`${where}: source.repository missing`);
   if (src.licenseUrl && isLocal(src.licenseUrl) && !fileExists(src.licenseUrl)) err(`${where}: license file not found: ${src.licenseUrl}`);
   if ((g.status || 'ready') === 'ready' && src.type !== 'original' && !src.licenseUrl) warn(`${where}: no licenseUrl; link the game's license file`);
 }

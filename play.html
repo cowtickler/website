@@ -34,6 +34,21 @@
       <span class="visually-hidden">Loading game</span>
     </div>
 
+    <section class="player-overlay player-external" id="player-external" aria-labelledby="external-title" hidden>
+      <div class="external-box">
+        <img class="external-thumb" id="external-thumb" alt="" width="320" height="180" hidden>
+        <h2 class="external-title" id="external-title"></h2>
+        <p class="external-credit" id="external-credit" hidden></p>
+        <p class="external-text" id="external-text"></p>
+        <div class="overlay-actions">
+          <a class="text-btn text-btn-primary" id="external-link" href="index.html" target="_blank" rel="noopener noreferrer">Open Official Game</a>
+          <a class="text-btn" href="index.html">Back to games</a>
+        </div>
+        <p class="external-note" id="external-network"></p>
+        <p class="external-url" id="external-url"></p>
+      </div>
+    </section>
+
     <div class="player-overlay" id="player-error" role="alert" hidden>
       <p id="player-error-text">This game could not be loaded.</p>
       <div class="overlay-actions">

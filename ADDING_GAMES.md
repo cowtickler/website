@@ -158,7 +158,7 @@ Add an object to `"games"` in `data/games.json`:
 | --- | --- | --- |
 | `id` | yes | Unique; lowercase letters, numbers, dashes. Used in `play.html?id=`. |
 | `title` | yes | Display name (max 80 characters). |
-| `entry` | yes | Path to the game's HTML page, must start with `games/`. For a game with `"embeddable": false`, the official `https://` page instead. |
+| `entry` | yes | Path to the game's HTML page, must start with `games/`. For a game with `"embeddable": false`, the official `https://` page instead. For a game framed from another website that allows it, that site's `https://` page; its origin must be listed in `externalOrigins` in `js/config.js` and in `frame-src` in `play.html`. The player then shows the game's title, a link to its source and a Reload button. |
 | `description` | recommended | Not shown on the site right now; kept for the record and future features. |
 | `categories` | optional | Ids from the `categories` list. Not shown right now; kept for future filters. |
 | `tags` | optional | Not shown right now; kept for future search. |
@@ -175,7 +175,7 @@ Add an object to `"games"` in `data/games.json`:
 | `compatibility.lowEnd` | recommended | `good`, `fair`, `poor` or `unknown` (only claim `good` after testing). |
 | `compatibility.notes` | optional | Honest limitations. |
 | `isolation` | optional | `standard` (default; game can use storage) or `strict` (separate origin; safer, no storage). |
-| `source.*` | yes | Credit and license. `type` is `original`, `third-party` or `external` (played on another site). `platform` names that site (for example `"Poki"`); the player then says "Play on Poki". |
+| `source.*` | yes | Credit and license. `type` is `original`, `third-party` or `external` (played on another site). `platform` names that site (for example `"Y8"`); the player then says "Play on Y8", or "from Y8" above a framed game. `url` is the game's own page on that site, when the framed `entry` is a different, embed-only page; the player's source link and Open Original Game use it. |
 | `added` | optional | `YYYY-MM-DD`, used by "Newest" sorting. |
 | `status` | optional | `ready` (shown), `review` or `disabled` (hidden and not playable). |
 

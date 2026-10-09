@@ -34,6 +34,23 @@ function fileExists(p) {
   return full.startsWith(root) && existsSync(full) && statSync(full).isFile();
 }
 
+// Websites whose games the player may frame: js/config.js externalOrigins,
+// each of which must also be allowed by frame-src in play.html.
+const externalOrigins = [...(/externalOrigins:\s*\[([^\]]*)\]/.exec(readFileSync(join(root, 'js/config.js'), 'utf8')) || ['', ''])[1]
+  .matchAll(/'([^']+)'/g)].map((m) => m[1]);
+const playHtml = readFileSync(join(root, 'play.html'), 'utf8');
+externalOrigins.forEach((o) => {
+  if (!new RegExp(`frame-src[^;"]*${o.replace(/[.]/g, '\\.')}`).test(playHtml)) err(`js/config.js lists ${o}, but play.html's frame-src does not allow it`);
+});
+const framedOrigin = (entry) => {
+  try {
+    const u = new URL(entry);
+    return u.protocol === 'https:' && externalOrigins.includes(u.origin);
+  } catch (e) {
+    return false;
+  }
+};
+
 let catalog;
 try {
   catalog = JSON.parse(readFileSync(join(root, 'data/games.json'), 'utf8'));
@@ -65,6 +82,8 @@ for (const g of catalog.games) {
   if (!g.description) warn(`${where}: no description`);
 
   if (g.embeddable === false && /^https:\/\/[^/\s]+/.test(g.entry || '')) { /* official site, linked not framed */ }
+  else if (g.embeddable !== false && framedOrigin(g.entry)) { /* framed from an allowed website */ }
+  else if (/^https:/.test(g.entry || '')) err(`${where}: ${g.entry} is not in externalOrigins (js/config.js); frame it only if that site allows it, otherwise set "embeddable": false`);
   else if (!isLocal(g.entry) || !g.entry.startsWith('games/')) err(`${where}: entry must be a relative path inside games/`);
   else if (!fileExists(g.entry)) err(`${where}: entry file not found: ${g.entry}`);
   else if (!g.entry.startsWith(`games/${id}/`)) warn(`${where}: entry is not inside games/${id}/ (recommended layout)`);
@@ -91,7 +110,7 @@ for (const g of catalog.games) {
   const src = g.source || {};
   if (!src.license) err(`${where}: source.license is required (use "review" status until it is known)`);
   if (src.type !== 'original' && !src.author) warn(`${where}: source.author missing`);
-  if (src.type !== 'original' && g.embeddable !== false && !src.repository) warn(`${where}: source.repository missing`);
+  if (src.type !== 'original' && src.type !== 'external' && !src.repository) warn(`${where}: source.repository missing`);
   if (src.licenseUrl && isLocal(src.licenseUrl) && !fileExists(src.licenseUrl)) err(`${where}: license file not found: ${src.licenseUrl}`);
   if ((g.status || 'ready') === 'ready' && src.type !== 'original' && !src.licenseUrl) warn(`${where}: no licenseUrl; link the game's license file`);
 }

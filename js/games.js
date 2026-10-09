@@ -138,6 +138,7 @@
         authorUrl: safeHttpsUrl(source.authorUrl),
         repository: safeHttpsUrl(source.repository),
         platform: str(source.platform, 40),
+        url: safeHttpsUrl(source.url),
         license: str(source.license, 60),
         licenseUrl: safeLocalPath(source.licenseUrl) || safeHttpsUrl(source.licenseUrl)
       },

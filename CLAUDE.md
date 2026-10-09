@@ -39,6 +39,8 @@ framework, no build step, no backend. Read `README.md` for the overview and
 The owner wants the site minimal: the homepage shows only the game icons and
 names, and the player shows only the game plus a back and a fullscreen button.
 Do not add headers, search, categories, favorites or other UI unless asked.
+Exception (asked 2026-10-09): a game framed from another website also shows its
+title, its source link and a Reload button in the player's bar.
 
 ## Code map
 
@@ -49,7 +51,7 @@ Do not add headers, search, categories, favorites or other UI unless asked.
 - Games with license problems wait in `_incoming/` (git-ignored, never
   published); see their `ARCADEHUB_NOTES.md`. Exception: the owner chose to
   publish Minesweeper, Pac-Man, Fireboy & Watergirl and Cookie Clicker anyway
-  (2026-10-08); keep their notes. The owner removed Subway Surf and Subway
+  (2026-10-08), and Basket Random (2026-10-09); keep their notes. The owner removed Subway Surf and Subway
   Surfers on 2026-10-09.
 - A game that refuses to run inside a frame gets `"openInPlayer": false`
   (it opens as its own page). Never patch out a game's frame check.
@@ -57,3 +59,9 @@ Do not add headers, search, categories, favorites or other UI unless asked.
   false` with its official URL as `entry`; the player shows a button that opens
   it in a new tab. Never proxy, re-host or work around the restriction.
   (Unused since the owner removed Subway Surfers on 2026-10-09.)
+- A game whose site allows framing can be framed from there: its origin goes in
+  `externalOrigins` (js/config.js) and play.html's `frame-src`. Temple Run 2
+  (games.engineering.com) works this way. Check the site's headers and embed
+  terms first, and frame only pages the site offers for embedding. Exception:
+  the owner chose to frame Y8's unlisted embed page for Ball Fall 3D, which Y8
+  offers only as a link (2026-10-09).

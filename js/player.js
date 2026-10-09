@@ -1,7 +1,8 @@
 /*
  * Player page (play.html?id=<game-id>).
  * Loads exactly one game into one sandboxed iframe that fills the window,
- * with a back button and fullscreen.
+ * with a back button and fullscreen. A game framed from another website also
+ * gets its title, its source and a reload button.
  */
 (function (AH) {
   'use strict';
@@ -55,8 +56,8 @@
     $('external-credit').textContent = by.join(' · ');
     $('external-credit').hidden = !by.length;
     $('external-text').textContent = (platform
-      ? platform + ' does not allow its games to be played inside other websites, so ' +
-        game.title + ' opens on ' + platform + ' in a new tab.'
+      ? platform + ' does not offer ' + game.title + ' for other websites to embed, so it opens on ' +
+        platform + ' in a new tab.'
       : game.title + '’s official website does not allow the game to be played inside ' +
         'other websites, so it opens there in a new tab.') + ' This site stays open here.';
     $('external-link').href = url.href;
@@ -70,6 +71,31 @@
     }
     $('player-external').hidden = false;
     $('external-link').focus();
+  }
+
+  /**
+   * For a game framed from another website. The player cannot see inside a
+   * page from another origin, so it cannot tell whether the game itself
+   * started (the frame's load event fires for error pages and filter block
+   * pages too). The source link and reload button therefore stay available.
+   * They open source.url (the game's own page there) when it differs from the
+   * framed entry, for example an embed-only page.
+   */
+  function showExternalInfo() {
+    var url = new URL(game.source.url || game.entry);
+    var host = new URL(game.entry).host;
+    var name = game.source.platform || url.host;
+    $('play-title').textContent = game.title;
+    $('play-source').textContent = name;
+    $('play-source').href = url.href;
+    $('play-source').title = 'Open ' + game.title + ' on ' + name + ' in a new tab';
+    $('play-info').hidden = false;
+    $('reload-btn').hidden = false;
+    $('error-original').href = url.href;
+    $('error-original').hidden = false;
+    $('error-note').textContent = game.title + ' loads from ' + host + '. If that site is down or ' +
+      'blocked on your network (for example by a school filter), the game cannot load here or there.';
+    $('error-note').hidden = false;
   }
 
   function focusGame() {
@@ -111,6 +137,16 @@
     frame.addEventListener('load', onFrameLoad);
     $('frame-wrap').appendChild(frame);
     return frame;
+  }
+
+  /** Starts the game again in a new frame, so the old one is fully unloaded. */
+  function reloadGame() {
+    if (frame) {
+      frame.removeEventListener('load', onFrameLoad);
+      frame.parentNode.removeChild(frame);
+      frame = null;
+    }
+    loadGame();
   }
 
   function loadGame() {
@@ -208,6 +244,7 @@
     $('error-retry').addEventListener('click', function () {
       loadGame();
     });
+    $('reload-btn').addEventListener('click', reloadGame);
     $('player-stage').addEventListener('click', function (event) {
       if (event.target === $('player-stage') || event.target === $('frame-wrap')) focusGame();
     });
@@ -237,6 +274,7 @@
         window.location.replace(game.entry);
         return;
       }
+      if (game.isExternal) showExternalInfo();
       if (game.aspectRatio) {
         var stage = $('player-stage');
         stage.classList.add('has-ratio');

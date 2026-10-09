@@ -13,7 +13,7 @@ GitHub Pages hosting with no backend and no build step.
 | Homepage: a grid of game icons, nothing else | `index.html`, `js/app.js` |
 | Player: the game fills the window, with a back button and fullscreen (games framed from another website, and games marked `titleBar`, also show their title, source and a reload button) | `play.html?id=<game-id>`, `js/player.js` |
 | Central game catalog (validated on load; unsafe entries are skipped) | `data/games.json`, `js/games.js` |
-| Games: 2048, Chess, Minesweeper, Pac-Man, Neon Snake, Fireboy & Watergirl (Forest Temple and Light Temple), Cookie Clicker, Basket Random, Papa's Freezeria, Papa's Pizzeria | `games/` |
+| Games: 2048, Chess, Minesweeper, Pac-Man, Neon Snake, Fireboy & Watergirl (Forest Temple and Light Temple), Cookie Clicker, Basket Random, Papa's Freezeria, Papa's Pizzeria, Wordle | `games/` |
 | Games from other websites, framed in the player: Temple Run 2 (ENGINEERING.com), Ball Fall 3D (Y8) | `data/games.json` |
 | Source and license notes for each game | `games/<game-id>/ARCADEHUB_NOTES.md` |
 | Catalog checker (optional, needs Node.js) | `tools/validate-catalog.mjs` |
@@ -33,6 +33,11 @@ Papa's Freezeria and Papa's Pizzeria are Flipline Studios' official Standard
 Versions, which Flipline offers free for hosting on other websites as long as
 they are not altered. The SWFs are kept exactly as downloaded and play with the
 same local Ruffle; see their `ARCADEHUB_NOTES.md` files.
+
+Wordle is Wordle Global's code (MIT, by Hugo Montenegro), rebuilt as plain files
+because the original is a Python server app. Its word lists are not covered by
+the MIT license, and "Wordle" is a trademark of The New York Times. See
+`games/wordle/ARCADEHUB_NOTES.md`.
 
 Cookie Clicker is Orteil's copyrighted game, from an unofficial mirror. Its
 author asks people not to re-host it, so it could be taken down. It opens on
@@ -74,7 +79,8 @@ gaming-website/
 │   ├── neon-snake/
 │   ├── fireboy-watergirl/  Flash game played with Ruffle
 │   ├── papas-freezeria/    Flash game played with Ruffle
-│   └── papas-pizzeria/     Flash game played with Ruffle
+│   ├── papas-pizzeria/     Flash game played with Ruffle
+│   └── wordle/             Static English Wordle (MIT code, word lists flagged)
 ├── vendor/ruffle/          Ruffle (Flash emulator), shared by the Flash games
 ├── assets/
 │   ├── thumbnails/         640x360 WebP icons, named <game-id>.webp

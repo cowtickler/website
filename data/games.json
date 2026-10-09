@@ -718,6 +718,65 @@
       },
       "added": "2026-10-09",
       "status": "ready"
+    },
+    {
+      "id": "wordle",
+      "title": "Wordle",
+      "description": "Guess the hidden five-letter word in six tries. Green means the letter is in the right spot, yellow means it is in the word but somewhere else. A new word every day.",
+      "categories": [
+        "puzzle"
+      ],
+      "tags": [
+        "word",
+        "daily",
+        "letters",
+        "single player"
+      ],
+      "thumbnail": "assets/thumbnails/wordle.webp",
+      "entry": "games/wordle/index.html",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Letter keys",
+          "action": "Type a guess"
+        },
+        {
+          "keys": "Enter",
+          "action": "Submit the guess"
+        },
+        {
+          "keys": "Backspace",
+          "action": "Delete a letter"
+        },
+        {
+          "keys": "Click / tap",
+          "action": "Use the on-screen keyboard"
+        }
+      ],
+      "compatibility": {
+        "performance": "light",
+        "lowEnd": "good",
+        "notes": "English version. One new word a day for everyone, changing at midnight UTC. Your progress and stats are saved in this browser. Gameplay not tested here; the owner is testing it."
+      },
+      "isolation": "standard",
+      "source": {
+        "type": "third-party",
+        "author": "Hugo Montenegro",
+        "authorUrl": "https://github.com/Hugo0",
+        "repository": "https://github.com/Hugo0/wordle",
+        "license": "MIT (code); word lists not covered",
+        "licenseUrl": "games/wordle/LICENSE"
+      },
+      "added": "2026-10-09",
+      "status": "ready"
     }
   ]
 }

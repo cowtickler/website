@@ -777,6 +777,68 @@
       },
       "added": "2026-10-09",
       "status": "ready"
+    },
+    {
+      "id": "super-mario-world",
+      "title": "Super Mario World",
+      "description": "Guide Mario through Dinosaur Land in the classic Super Nintendo platform adventure.",
+      "categories": [
+        "platformer",
+        "action"
+      ],
+      "tags": [
+        "snes",
+        "platformer",
+        "retro",
+        "single player"
+      ],
+      "entry": "games/super-mario-world/index.html",
+      "aspectRatio": "4:3",
+      "titleBar": true,
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": false,
+        "gamepad": true
+      },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Arrow keys",
+          "action": "Move and duck"
+        },
+        {
+          "keys": "A / X",
+          "action": "Jump"
+        },
+        {
+          "keys": "S / Z",
+          "action": "Run, grab and use power-ups"
+        },
+        {
+          "keys": "Gamepad / touch controls",
+          "action": "Use the on-screen or connected controller"
+        }
+      ],
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "Requires the EmulatorJS CDN and the external game host. Saves are kept in this browser. Live gameplay still needs verification."
+      },
+      "isolation": "standard",
+      "source": {
+        "type": "external",
+        "author": "Nintendo",
+        "authorUrl": "https://www.nintendo.com/",
+        "platform": "EmulatorJS demo page",
+        "url": "https://sites.google.com/view/emulatorjs/games/super-mario-world",
+        "license": "Game and assets: no redistribution license found; EmulatorJS: GPL-3.0",
+        "licenseUrl": "games/super-mario-world/ARCADEHUB_NOTES.md"
+      },
+      "added": "2026-10-08",
+      "status": "ready"
     }
   ]
 }

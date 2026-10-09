@@ -668,6 +668,56 @@
       },
       "added": "2026-10-09",
       "status": "ready"
+    },
+    {
+      "id": "papas-pizzeria",
+      "title": "Papa's Pizzeria",
+      "description": "Help Roy run Papa Louie's pizzeria while Papa is away: take orders, top and bake each pizza, cut it and serve it to earn tips and unlock new customers.",
+      "categories": [
+        "cooking",
+        "simulation"
+      ],
+      "tags": [
+        "flash",
+        "cooking",
+        "restaurant",
+        "pizza",
+        "single player"
+      ],
+      "thumbnail": "assets/thumbnails/papas-pizzeria.webp",
+      "entry": "games/papas-pizzeria/index.html",
+      "aspectRatio": "4:3",
+      "titleBar": true,
+      "input": {
+        "keyboard": false,
+        "touch": false,
+        "mouse": true,
+        "gamepad": false
+      },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Mouse",
+          "action": "Take orders, top, bake, cut and serve pizzas"
+        }
+      ],
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "Original Flash game played with Ruffle, which is hosted on this site. Mouse required. Gameplay not tested here; the owner is testing it."
+      },
+      "isolation": "standard",
+      "source": {
+        "type": "third-party",
+        "author": "Flipline Studios",
+        "authorUrl": "https://www.flipline.com/",
+        "license": "Flipline Standard Version: free to host, unaltered",
+        "licenseUrl": "games/papas-pizzeria/ARCADEHUB_NOTES.md"
+      },
+      "added": "2026-10-09",
+      "status": "ready"
     }
   ]
 }

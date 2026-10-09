@@ -40,8 +40,8 @@ The owner wants the site minimal: the homepage shows only the game icons and
 names, and the player shows only the game plus a back and a fullscreen button.
 Do not add headers, search, categories, favorites or other UI unless asked.
 Exception (asked 2026-10-09): a game framed from another website also shows its
-title, its source link and a Reload button in the player's bar, and so does
-Papa's Freezeria (`"titleBar": true`, asked for by the owner).
+title, its source link and a Reload button in the player's bar, and so do
+Papa's Freezeria and Papa's Pizzeria (`"titleBar": true`, asked for by the owner).
 
 ## Code map
 
@@ -56,8 +56,8 @@ Papa's Freezeria (`"titleBar": true`, asked for by the owner).
   Surfers on 2026-10-09.
 - Flash games use the one Ruffle copy in `vendor/ruffle/` (0.7.1 from npm;
   see its README to update). Test Ruffle in Playwright with `locale: 'en-US'`
-  or it fails to start. Papa's Freezeria is Flipline's Standard Version:
-  its terms forbid altering it, so never modify `papasfreezeria.swf`.
+  or it fails to start. Papa's Freezeria and Papa's Pizzeria are Flipline's
+  Standard Versions: their terms forbid altering them, so never modify their SWFs.
 - A game that refuses to run inside a frame gets `"openInPlayer": false`
   (it opens as its own page). Never patch out a game's frame check.
 - A game whose official site does not allow embedding gets `"embeddable":

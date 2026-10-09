@@ -166,7 +166,7 @@ Add an object to `"games"` in `data/games.json`:
 | `aspectRatio` | optional | `"16:9"`, `"4:3"`, `"3:4"`… Letterboxes fixed-size games. Omit to fill the player. |
 | `input` | yes | What really works (keyboard, touch, mouse, gamepad). Recorded for honesty and future filters. |
 | `fullscreen` | optional | `false` hides the fullscreen button. Default `true`. |
-| `titleBar` | optional | `true` makes the player's bar show the game's title, "by" its author (linking `source.authorUrl`, new tab) and a Reload button, for a local game whose owner asked for them (Papa's Freezeria). Framed games always get them. Default `false`. |
+| `titleBar` | optional | `true` makes the player's bar show the game's title, "by" its author (linking `source.authorUrl`, new tab) and a Reload button, for a local game whose owner asked for them (Papa's Freezeria and Papa's Pizzeria). Framed games always get them. Default `false`. |
 | `openInPlayer` | optional | `false` makes the icon open `entry` as its own page instead of in the player, for a game that refuses to run inside a frame. Never patch out the game's frame check instead. Default `true`. |
 | `embeddable` | optional | `false` for a game whose official site does not allow it inside other websites (`X-Frame-Options`, CSP `frame-ancestors`, a script check, or its terms). `entry` is then the official `https://` page. The icon still opens the player, which shows the game's title, credit and a button that opens the official page in a new tab, instead of a frame. Never proxy, re-host or work around the restriction. Default `true`. |
 | `featured` | optional | Not used right now. |

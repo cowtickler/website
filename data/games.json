@@ -451,6 +451,58 @@
         "repository": "https://github.com/ozh/cookieclicker",
         "license": "Proprietary (author asks not to re-host)"
       }
+    },
+    {
+      "categories": [
+        "sports",
+        "multiplayer"
+      ],
+      "tags": [
+        "basketball",
+        "2 players",
+        "physics"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "W",
+          "action": "Player 1 jumps and shoots"
+        },
+        {
+          "keys": "Up arrow",
+          "action": "Player 2 jumps and shoots"
+        },
+        {
+          "keys": "Tap",
+          "action": "Play on a touch screen"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-09",
+      "status": "ready",
+      "id": "basket-random",
+      "title": "Basket Random",
+      "description": "Floppy two-on-two basketball with one button per team: play the computer or a friend on the same keyboard. Every point changes the court and the players.",
+      "thumbnail": "assets/thumbnails/basket-random.webp",
+      "entry": "games/basket-random/index.html",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "light",
+        "lowEnd": "unknown",
+        "notes": "A copy of GameDistribution's build with its ads and site check patched out by whoever made the ZIP; hosted at the owner's request. Two harmless console errors come from that patched code."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "RHM Interactive",
+        "license": "None (copyrighted; unofficial copy)"
+      }
     }
   ]
 }

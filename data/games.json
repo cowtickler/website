@@ -504,6 +504,82 @@
         "repository": "https://github.com/ozh/cookieclicker",
         "license": "Proprietary (author asks not to re-host)"
       }
+    },
+    {
+      "categories": [
+        "action",
+        "arcade"
+      ],
+      "tags": [
+        "endless runner",
+        "runner",
+        "3d"
+      ],
+      "fullscreen": false,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Left / Right arrows",
+          "action": "Change lanes"
+        },
+        {
+          "keys": "Up arrow",
+          "action": "Jump"
+        },
+        {
+          "keys": "Down arrow",
+          "action": "Roll"
+        },
+        {
+          "keys": "Space",
+          "action": "Hoverboard"
+        },
+        {
+          "keys": "Swipe left / right",
+          "action": "Change lanes"
+        },
+        {
+          "keys": "Swipe up",
+          "action": "Jump"
+        },
+        {
+          "keys": "Swipe down",
+          "action": "Roll"
+        },
+        {
+          "keys": "Double tap",
+          "action": "Hoverboard"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-09",
+      "status": "ready",
+      "id": "subway-surfers",
+      "title": "Subway Surfers",
+      "description": "SYBO's endless runner: dash along the subway tracks, dodge trains and collect coins. Plays on Poki, the game's official home on the web.",
+      "thumbnail": "assets/thumbnails/subway-surfers.webp",
+      "entry": "https://poki.com/en/g/subway-surfers",
+      "embeddable": false,
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": false,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "Opens on poki.com in a new tab: Poki does not allow its games inside other websites (its pages send Content-Security-Policy frame-ancestors for Poki's own domains only). Networks that block poki.com, such as many school filters, block this game too."
+      },
+      "source": {
+        "type": "external",
+        "author": "SYBO",
+        "authorUrl": "https://sybogames.com/",
+        "platform": "Poki",
+        "license": "Proprietary (SYBO, published on the web by Poki)",
+        "licenseUrl": "https://poki.com/en/c/terms-of-use"
+      }
     }
   ]
 }

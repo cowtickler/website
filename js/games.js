@@ -46,12 +46,17 @@
     }
   }
 
-  /** Game entry: a local path under games/, or an allow-listed external origin. */
-  function safeEntry(value) {
+  /**
+   * Game entry: a local path under games/, or an https URL. An external game
+   * shown in the player's frame must use an allow-listed origin; one marked
+   * "embeddable": false is never framed (the player links to it instead).
+   */
+  function safeEntry(value, embeddable) {
     var local = safeLocalPath(value);
     if (local) return local.indexOf('games/') === 0 ? local : '';
     var url = safeHttpsUrl(value);
     if (!url) return '';
+    if (!embeddable) return url;
     var allowed = (AH.config && AH.config.externalOrigins) || [];
     return allowed.indexOf(new URL(url).origin) !== -1 ? url : '';
   }
@@ -76,7 +81,8 @@
     if (!ID_PATTERN.test(id)) return warn('invalid id "' + id + '" (use lowercase letters, numbers and dashes)');
     var title = str(raw.title, 80);
     if (!title) return warn(id + ': missing title');
-    var entry = safeEntry(raw.entry);
+    var embeddable = raw.embeddable !== false;
+    var entry = safeEntry(raw.entry, embeddable);
     if (!entry) return warn(id + ': entry must be a relative path inside games/');
 
     var cats = Array.isArray(raw.categories) ? raw.categories : (raw.category ? [raw.category] : []);
@@ -103,6 +109,7 @@
       thumbnail: safeLocalPath(raw.thumbnail),
       entry: entry,
       isExternal: /^https:/.test(entry),
+      embeddable: embeddable,
       openInPlayer: raw.openInPlayer !== false,
       aspectRatio: parseRatio(raw.aspectRatio),
       input: {
@@ -130,6 +137,7 @@
         author: str(source.author, 100),
         authorUrl: safeHttpsUrl(source.authorUrl),
         repository: safeHttpsUrl(source.repository),
+        platform: str(source.platform, 40),
         license: str(source.license, 60),
         licenseUrl: safeLocalPath(source.licenseUrl) || safeHttpsUrl(source.licenseUrl)
       },

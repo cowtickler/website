@@ -158,7 +158,7 @@ Add an object to `"games"` in `data/games.json`:
 | --- | --- | --- |
 | `id` | yes | Unique; lowercase letters, numbers, dashes. Used in `play.html?id=`. |
 | `title` | yes | Display name (max 80 characters). |
-| `entry` | yes | Path to the game's HTML page, must start with `games/`. |
+| `entry` | yes | Path to the game's HTML page, must start with `games/`. For a game with `"embeddable": false`, the official `https://` page instead. |
 | `description` | recommended | Not shown on the site right now; kept for the record and future features. |
 | `categories` | optional | Ids from the `categories` list. Not shown right now; kept for future filters. |
 | `tags` | optional | Not shown right now; kept for future search. |
@@ -167,6 +167,7 @@ Add an object to `"games"` in `data/games.json`:
 | `input` | yes | What really works (keyboard, touch, mouse, gamepad). Recorded for honesty and future filters. |
 | `fullscreen` | optional | `false` hides the fullscreen button. Default `true`. |
 | `openInPlayer` | optional | `false` makes the icon open `entry` as its own page instead of in the player, for a game that refuses to run inside a frame. Never patch out the game's frame check instead. Default `true`. |
+| `embeddable` | optional | `false` for a game whose official site does not allow it inside other websites (`X-Frame-Options`, CSP `frame-ancestors`, a script check, or its terms). `entry` is then the official `https://` page. The icon still opens the player, which shows the game's title, credit and a button that opens the official page in a new tab, instead of a frame. Never proxy, re-host or work around the restriction. Default `true`. |
 | `featured` | optional | Not used right now. |
 | `popular` | optional | Not used right now. |
 | `controls` | recommended | How to play. Not shown right now; most games explain their own controls. |
@@ -174,7 +175,7 @@ Add an object to `"games"` in `data/games.json`:
 | `compatibility.lowEnd` | recommended | `good`, `fair`, `poor` or `unknown` (only claim `good` after testing). |
 | `compatibility.notes` | optional | Honest limitations. |
 | `isolation` | optional | `standard` (default; game can use storage) or `strict` (separate origin; safer, no storage). |
-| `source.*` | yes | Credit and license. `type` is `original` or `third-party`. |
+| `source.*` | yes | Credit and license. `type` is `original`, `third-party` or `external` (played on another site). `platform` names that site (for example `"Poki"`); the player then says "Play on Poki". |
 | `added` | optional | `YYYY-MM-DD`, used by "Newest" sorting. |
 | `status` | optional | `ready` (shown), `review` or `disabled` (hidden and not playable). |
 

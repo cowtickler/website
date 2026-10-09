@@ -13,7 +13,7 @@ GitHub Pages hosting with no backend and no build step.
 | Homepage: a grid of game icons, nothing else | `index.html`, `js/app.js` |
 | Player: the game fills the window, with a back button and fullscreen | `play.html?id=<game-id>`, `js/player.js` |
 | Central game catalog (validated on load; unsafe entries are skipped) | `data/games.json`, `js/games.js` |
-| Games: 2048, Chess, Minesweeper, Pac-Man, Neon Snake, Fireboy & Watergirl (Forest Temple and Light Temple), Subway Surf, Cookie Clicker | `games/` |
+| Games: 2048, Chess, Minesweeper, Pac-Man, Neon Snake, Fireboy & Watergirl (Forest Temple and Light Temple), Subway Surf, Cookie Clicker; Subway Surfers links to Poki | `games/` |
 | Source and license notes for each game | `games/<game-id>/ARCADEHUB_NOTES.md` |
 | Catalog checker (optional, needs Node.js) | `tools/validate-catalog.mjs` |
 | Guide for adding open-source games | [`ADDING_GAMES.md`](ADDING_GAMES.md) |
@@ -38,6 +38,14 @@ author asks people not to re-host it, so it could be taken down. It opens on
 its own page instead of the player, because it refuses to run inside a frame
 (`"openInPlayer": false` in the catalog). Its ads and Facebook tracking were
 removed; see `games/cookie-clicker/ARCADEHUB_NOTES.md`.
+
+Subway Surfers (SYBO) is not on this site: Poki, its official home on the web,
+does not allow its games inside other websites (its pages only allow Poki's own
+domains in `frame-ancestors`, and its terms forbid republishing its content).
+Its icon opens the player, which shows a "Play on Poki" button that opens
+https://poki.com/en/g/subway-surfers in a new tab (`"embeddable": false` in
+the catalog). Networks that block poki.com, such as many school filters, block
+it too. The thumbnail is original artwork, not SYBO's.
 
 ## Project structure
 

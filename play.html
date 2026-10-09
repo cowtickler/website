@@ -21,10 +21,11 @@
     <a class="icon-btn" id="back-btn" href="index.html" aria-label="Back to games" title="Back to games">
       <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg>
     </a>
-    <!-- Games framed from another website also show their title, source and a reload button. -->
+    <!-- Games framed from another website, and games marked "titleBar": true, also show
+         their title, source or maker, and a reload button. -->
     <p class="play-info" id="play-info" hidden>
       <span class="play-title" id="play-title"></span>
-      <span class="play-credit">from <a id="play-source" href="index.html" target="_blank" rel="noopener noreferrer"></a></span>
+      <span class="play-credit" id="play-credit" hidden><span id="play-credit-label">from</span> <a id="play-source" href="index.html" target="_blank" rel="noopener noreferrer"></a></span>
     </p>
     <span class="play-actions">
       <button class="icon-btn" type="button" id="reload-btn" aria-label="Reload game" title="Reload game" hidden>

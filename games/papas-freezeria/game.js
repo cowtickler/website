@@ -1,9 +1,10 @@
-/* Plays light-temple.swf with Ruffle (the site's copy in vendor/ruffle/, loaded by index.html)
-   and shows a plain message when Ruffle or the SWF cannot be loaded. */
+/* Plays papasfreezeria.swf (Flipline Studios' Standard Version, unmodified) with
+   Ruffle (the site's copy in vendor/ruffle/, loaded by index.html) and shows a plain
+   message when Ruffle or the SWF cannot be loaded. */
 (function () {
   'use strict';
 
-  var SWF_URL = 'light-temple.swf';
+  var SWF_URL = 'papasfreezeria.swf';
   var LOAD_TIMEOUT_MS = 30000;
 
   var holder = document.getElementById('fw-player');
@@ -69,8 +70,9 @@
     try {
       result = api.load({
         url: SWF_URL,
-        // The SWF has an ad loader. This limits its network APIs, and the page's
-        // Content-Security-Policy blocks the ad request itself.
+        // The SWF still contains Mochi and Armor Games loaders. This limits its network
+        // APIs, and the page's Content-Security-Policy blocks the requests themselves.
+        // Saves (Flash SharedObjects) still work: Ruffle keeps them in localStorage.
         allowNetworking: 'none',
         openUrlMode: 'deny',
         autoplay: 'on',
@@ -90,7 +92,7 @@
     .then(function (res) { return res.ok; }, function () { return false; })
     .then(function (found) {
       if (!found) {
-        showMessage('The game file (light-temple.swf) is missing from this website.');
+        showMessage('The game file (papasfreezeria.swf) is missing from this website.');
         return;
       }
       try {

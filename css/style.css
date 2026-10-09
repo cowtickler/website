@@ -234,7 +234,7 @@ a {
   gap: 4px;
 }
 
-/* Title and source, shown for games framed from another website. */
+/* Title and source, shown for games framed from another website and games marked "titleBar". */
 .play-info {
   display: flex;
   align-items: baseline;

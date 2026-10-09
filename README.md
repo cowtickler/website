@@ -11,9 +11,9 @@ GitHub Pages hosting with no backend and no build step.
 | Feature | Where |
 | --- | --- |
 | Homepage: a grid of game icons, nothing else | `index.html`, `js/app.js` |
-| Player: the game fills the window, with a back button and fullscreen (games framed from another website also show their title, source and a reload button) | `play.html?id=<game-id>`, `js/player.js` |
+| Player: the game fills the window, with a back button and fullscreen (games framed from another website, and games marked `titleBar`, also show their title, source and a reload button) | `play.html?id=<game-id>`, `js/player.js` |
 | Central game catalog (validated on load; unsafe entries are skipped) | `data/games.json`, `js/games.js` |
-| Games: 2048, Chess, Minesweeper, Pac-Man, Neon Snake, Fireboy & Watergirl (Forest Temple and Light Temple), Cookie Clicker, Basket Random | `games/` |
+| Games: 2048, Chess, Minesweeper, Pac-Man, Neon Snake, Fireboy & Watergirl (Forest Temple and Light Temple), Cookie Clicker, Basket Random, Papa's Freezeria | `games/` |
 | Games from other websites, framed in the player: Temple Run 2 (ENGINEERING.com), Ball Fall 3D (Y8) | `data/games.json` |
 | Source and license notes for each game | `games/<game-id>/ARCADEHUB_NOTES.md` |
 | Catalog checker (optional, needs Node.js) | `tools/validate-catalog.mjs` |
@@ -25,9 +25,14 @@ sounds and unlicensed fonts in Pac-Man). The details are in their
 `ARCADEHUB_NOTES.md` files. Consider these before making the site public.
 
 Fireboy & Watergirl: Forest Temple is the original Flash game (`forest-temple.swf`)
-played with [Ruffle](https://ruffle.rs), which the page loads from unpkg.com, so
-it needs an internet connection. It is a copyrighted commercial game with no
+played with [Ruffle](https://ruffle.rs), the Flash emulator, which is hosted
+with the site in `vendor/ruffle/` and shared by every Flash game. It is a copyrighted commercial game with no
 license; see `games/fireboy-watergirl/ARCADEHUB_NOTES.md`.
+
+Papa's Freezeria is Flipline Studios' official Standard Version, which
+Flipline offers free for hosting on other websites as long as it is not
+altered. The SWF is kept exactly as downloaded and plays with the same local
+Ruffle; see `games/papas-freezeria/ARCADEHUB_NOTES.md`.
 
 Cookie Clicker is Orteil's copyrighted game, from an unofficial mirror. Its
 author asks people not to re-host it, so it could be taken down. It opens on
@@ -67,7 +72,9 @@ gaming-website/
 │   ├── minesweeper/
 │   ├── pacman/
 │   ├── neon-snake/
-│   └── fireboy-watergirl/  Flash game played with Ruffle
+│   ├── fireboy-watergirl/  Flash game played with Ruffle
+│   └── papas-freezeria/    Flash game played with Ruffle
+├── vendor/ruffle/          Ruffle (Flash emulator), shared by the Flash games
 ├── assets/
 │   ├── thumbnails/         640x360 WebP icons, named <game-id>.webp
 │   └── icons/              Favicon

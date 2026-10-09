@@ -110,6 +110,7 @@
       entry: entry,
       isExternal: /^https:/.test(entry),
       embeddable: embeddable,
+      titleBar: raw.titleBar === true || /^https:/.test(entry),
       openInPlayer: raw.openInPlayer !== false,
       aspectRatio: parseRatio(raw.aspectRatio),
       input: {

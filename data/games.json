@@ -407,59 +407,6 @@
     },
     {
       "categories": [
-        "action",
-        "arcade"
-      ],
-      "tags": [
-        "runner",
-        "3d",
-        "endless"
-      ],
-      "fullscreen": true,
-      "featured": false,
-      "popular": false,
-      "controls": [
-        {
-          "keys": "Left / Right arrows",
-          "action": "Change lanes"
-        },
-        {
-          "keys": "Space",
-          "action": "Jump"
-        },
-        {
-          "keys": "Down arrow",
-          "action": "Duck"
-        }
-      ],
-      "isolation": "standard",
-      "added": "2026-10-08",
-      "status": "ready",
-      "id": "subway-surf",
-      "title": "Subway Surf",
-      "description": "A 3D runner made with WebGL: switch lanes, jump and duck past trains and barriers while the police chase you.",
-      "thumbnail": "assets/thumbnails/subway-surf.webp",
-      "entry": "games/subway-surf/index.html",
-      "aspectRatio": "4:3",
-      "input": {
-        "keyboard": true,
-        "touch": false,
-        "mouse": false,
-        "gamepad": false
-      },
-      "compatibility": {
-        "performance": "medium",
-        "lowEnd": "unknown",
-        "notes": "Needs WebGL and a keyboard. A fan-made replica of Subway Surfers, written as a student project; not the official game."
-      },
-      "source": {
-        "type": "third-party",
-        "author": "Vaibhav Garg",
-        "license": "None stated"
-      }
-    },
-    {
-      "categories": [
         "arcade",
         "strategy"
       ],
@@ -468,7 +415,7 @@
         "clicker",
         "incremental"
       ],
-      "fullscreen": false,
+      "fullscreen": true,
       "featured": false,
       "popular": false,
       "controls": [
@@ -484,8 +431,8 @@
       "title": "Cookie Clicker",
       "description": "Orteil's idle game: click the big cookie, then buy grandmas, farms and factories to bake billions more.",
       "thumbnail": "assets/thumbnails/cookie-clicker.webp",
-      "entry": "https://orteil.dashnet.org/cookieclicker/",
-      "embeddable": false,
+      "entry": "games/cookie-clicker/index.html",
+      "openInPlayer": false,
       "input": {
         "keyboard": false,
         "touch": true,
@@ -495,89 +442,14 @@
       "compatibility": {
         "performance": "medium",
         "lowEnd": "unknown",
-        "notes": "Opens on orteil.dashnet.org in a new tab: the game shows \"Oops. Wrong address!\" when another website puts it in a frame. Progress is saved on the official site. Networks that block orteil.dashnet.org block the game too."
+        "notes": "Opens on its own page, because the game refuses to run inside another site's frame. Progress is saved in the browser."
       },
       "source": {
-        "type": "external",
+        "type": "third-party",
         "author": "Orteil (DashNet)",
         "authorUrl": "https://orteil.dashnet.org/",
-        "license": "Copyrighted (do not re-host)"
-      }
-    },
-    {
-      "categories": [
-        "action",
-        "arcade"
-      ],
-      "tags": [
-        "endless runner",
-        "runner",
-        "3d"
-      ],
-      "fullscreen": false,
-      "featured": false,
-      "popular": false,
-      "controls": [
-        {
-          "keys": "Left / Right arrows",
-          "action": "Change lanes"
-        },
-        {
-          "keys": "Up arrow",
-          "action": "Jump"
-        },
-        {
-          "keys": "Down arrow",
-          "action": "Roll"
-        },
-        {
-          "keys": "Space",
-          "action": "Hoverboard"
-        },
-        {
-          "keys": "Swipe left / right",
-          "action": "Change lanes"
-        },
-        {
-          "keys": "Swipe up",
-          "action": "Jump"
-        },
-        {
-          "keys": "Swipe down",
-          "action": "Roll"
-        },
-        {
-          "keys": "Double tap",
-          "action": "Hoverboard"
-        }
-      ],
-      "isolation": "standard",
-      "added": "2026-10-09",
-      "status": "ready",
-      "id": "subway-surfers",
-      "title": "Subway Surfers",
-      "description": "SYBO's endless runner: dash along the subway tracks, dodge trains and collect coins. Plays on Poki, the game's official home on the web.",
-      "thumbnail": "assets/thumbnails/subway-surfers.webp",
-      "entry": "https://poki.com/en/g/subway-surfers",
-      "embeddable": false,
-      "input": {
-        "keyboard": true,
-        "touch": true,
-        "mouse": false,
-        "gamepad": false
-      },
-      "compatibility": {
-        "performance": "medium",
-        "lowEnd": "unknown",
-        "notes": "Opens on poki.com in a new tab: Poki does not allow its games inside other websites (its pages send Content-Security-Policy frame-ancestors for Poki's own domains only). Networks that block poki.com, such as many school filters, block this game too."
-      },
-      "source": {
-        "type": "external",
-        "author": "SYBO",
-        "authorUrl": "https://sybogames.com/",
-        "platform": "Poki",
-        "license": "Proprietary (SYBO, published on the web by Poki)",
-        "licenseUrl": "https://poki.com/en/c/terms-of-use"
+        "repository": "https://github.com/ozh/cookieclicker",
+        "license": "Proprietary (author asks not to re-host)"
       }
     }
   ]

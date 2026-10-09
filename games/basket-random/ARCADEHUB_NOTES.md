@@ -26,7 +26,7 @@
 
 ## Known quirks
 - Two console errors on every load come from the patched SDK, not from this site: "Blocked: js/null.js" and an unhandled promise rejection "Cannot set properties of undefined (setting 'src')". The game plays normally.
-- The menu's "MORE" button and the TWOPLAYERGAMES.ORG logo try to open other websites; the player's sandbox blocks pop-ups, so they do nothing.
+- The menu's "MORE" button and the TWOPLAYERGAMES.ORG logo do nothing when clicked (checked in the player on 2026-10-09: no new tab, no navigation). The player's sandbox would block pop-ups anyway.
 
 ## Controls
 W: player 1 (left team) jumps and shoots. Up arrow: player 2 (right team). "1P" plays the computer, "2P" a friend on the same keyboard. Touch screens: tap.

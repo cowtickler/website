@@ -11,9 +11,10 @@ GitHub Pages hosting with no backend and no build step.
 | Feature | Where |
 | --- | --- |
 | Homepage: a grid of game icons, nothing else | `index.html`, `js/app.js` |
-| Player: the game fills the window, with a back button and fullscreen | `play.html?id=<game-id>`, `js/player.js` |
+| Player: the game fills the window, with a back button and fullscreen (games framed from another website also show their title, source and a reload button) | `play.html?id=<game-id>`, `js/player.js` |
 | Central game catalog (validated on load; unsafe entries are skipped) | `data/games.json`, `js/games.js` |
-| Games: 2048, Chess, Minesweeper, Pac-Man, Neon Snake, Fireboy & Watergirl (Forest Temple and Light Temple), Cookie Clicker | `games/` |
+| Games: 2048, Chess, Minesweeper, Pac-Man, Neon Snake, Fireboy & Watergirl (Forest Temple and Light Temple), Cookie Clicker, Basket Random | `games/` |
+| Games from other websites, framed in the player: Temple Run 2 (ENGINEERING.com), Ball Fall 3D (Y8) | `data/games.json` |
 | Source and license notes for each game | `games/<game-id>/ARCADEHUB_NOTES.md` |
 | Catalog checker (optional, needs Node.js) | `tools/validate-catalog.mjs` |
 | Guide for adding open-source games | [`ADDING_GAMES.md`](ADDING_GAMES.md) |
@@ -33,6 +34,18 @@ author asks people not to re-host it, so it could be taken down. It opens on
 its own page instead of the player, because it refuses to run inside a frame
 (`"openInPlayer": false` in the catalog). Its ads and Facebook tracking were
 removed; see `games/cookie-clicker/ARCADEHUB_NOTES.md`.
+
+Basket Random is RHM Interactive's copyrighted game, from a ZIP the owner
+supplied: GameDistribution's build with its ads and site check patched out by
+whoever made the ZIP. It is hosted at the owner's request and could be taken
+down; see `games/basket-random/ARCADEHUB_NOTES.md`.
+
+Temple Run 2 plays in the player from ENGINEERING.com's games site, which
+allows framing. Ball Fall 3D plays in the player from Y8's embed page, at the
+owner's request, although Y8 offers that game to other sites only as a link.
+No files are copied for either. Both depend on those sites, which can stop
+them at any time, and school filters may block them; see their
+`ARCADEHUB_NOTES.md` files.
 
 ## Project structure
 

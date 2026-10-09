@@ -229,6 +229,46 @@ a {
   color: var(--text);
 }
 
+.play-actions {
+  display: flex;
+  gap: 4px;
+}
+
+/* Title and source, shown for games framed from another website. */
+.play-info {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0 8px;
+  white-space: nowrap;
+}
+
+.play-title,
+.play-credit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.play-title {
+  flex: 0 1 auto;
+  font-weight: 600;
+}
+
+/* On narrow screens the source shortens before the title does. */
+.play-credit {
+  flex: 0 100 auto;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.play-credit a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .player-stage {
   position: relative;
   display: flex;

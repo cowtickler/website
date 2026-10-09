@@ -503,6 +503,109 @@
         "author": "RHM Interactive",
         "license": "None (copyrighted; unofficial copy)"
       }
+    },
+    {
+      "categories": [
+        "action",
+        "arcade"
+      ],
+      "tags": [
+        "endless runner",
+        "running",
+        "3D"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Left / Right arrows",
+          "action": "Turn at corners"
+        },
+        {
+          "keys": "Up arrow",
+          "action": "Jump"
+        },
+        {
+          "keys": "Down arrow",
+          "action": "Slide"
+        },
+        {
+          "keys": "Swipe",
+          "action": "Turn, jump and slide on a touch screen"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-09",
+      "status": "ready",
+      "id": "temple-run-2",
+      "title": "Temple Run 2",
+      "description": "Imangi Studios' endless runner: grab the idol and run, turning, jumping and sliding past traps for as long as you can.",
+      "thumbnail": "assets/thumbnails/temple-run-2.webp",
+      "entry": "https://games.engineering.com/temple-run-2/index.html",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": false,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "Plays inside the player from ENGINEERING.com's games site, which allows framing. Not tested here (that site could not be reached from the build machine). A school filter that blocks games.engineering.com blocks the game too."
+      },
+      "source": {
+        "type": "external",
+        "author": "Imangi Studios",
+        "authorUrl": "https://www.imangistudios.com/",
+        "platform": "ENGINEERING.com",
+        "license": "Not stated by ENGINEERING.com"
+      }
+    },
+    {
+      "categories": [
+        "arcade"
+      ],
+      "tags": [
+        "skill",
+        "3D",
+        "ball"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Mouse or Down arrow",
+          "action": "Smash the ball down through the tower"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-09",
+      "status": "ready",
+      "id": "ball-fall-3d",
+      "title": "Ball Fall 3D",
+      "description": "Gamebiz's 3D arcade game: smash a falling ball down through a spinning tower, but don't touch the black parts.",
+      "thumbnail": "assets/thumbnails/ball-fall-3d.webp",
+      "entry": "https://www.y8.com/embed/ball_fall_3d",
+      "input": {
+        "keyboard": true,
+        "touch": false,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "Framed from Y8's embed page at the owner's request, although Y8 offers this game to other sites only as a link. Not tested here (y8.com could not be reached from the build machine). WebGL; Y8 says it is made for computers with a keyboard or mouse."
+      },
+      "source": {
+        "type": "external",
+        "author": "Gamebiz",
+        "platform": "Y8",
+        "url": "https://www.y8.com/games/ball_fall_3d",
+        "license": "Y8 game; embed not offered for it (owner's choice)"
+      }
     }
   ]
 }

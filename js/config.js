@@ -16,9 +16,9 @@ window.ArcadeHub.config = {
   // How long the player waits before offering to reload a slow game.
   slowLoadMs: 15000,
 
-  // Optional external hosting (future). Game entries must normally be local
-  // paths under games/. To host a game on another origin, list that origin
-  // here (for example 'https://games.example.com') AND add it to frame-src
-  // in the Content-Security-Policy meta tag of play.html.
-  externalOrigins: []
+  // Games framed from another website. Game entries are normally local paths
+  // under games/. To show a game from another origin in the player, list that
+  // origin here AND add it to frame-src in the Content-Security-Policy meta
+  // tag of play.html. Only list sites that allow being framed.
+  externalOrigins: ['https://games.engineering.com', 'https://www.y8.com']
 };

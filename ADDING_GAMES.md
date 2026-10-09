@@ -166,6 +166,7 @@ Add an object to `"games"` in `data/games.json`:
 | `aspectRatio` | optional | `"16:9"`, `"4:3"`, `"3:4"`… Letterboxes fixed-size games. Omit to fill the player. |
 | `input` | yes | What really works (keyboard, touch, mouse, gamepad). Recorded for honesty and future filters. |
 | `fullscreen` | optional | `false` hides the fullscreen button. Default `true`. |
+| `openInPlayer` | optional | `false` makes the icon open `entry` as its own page instead of in the player, for a game that refuses to run inside a frame. Never patch out the game's frame check instead. Default `true`. |
 | `featured` | optional | Not used right now. |
 | `popular` | optional | Not used right now. |
 | `controls` | recommended | How to play. Not shown right now; most games explain their own controls. |

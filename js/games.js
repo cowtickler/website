@@ -110,7 +110,6 @@
       entry: entry,
       isExternal: /^https:/.test(entry),
       embeddable: embeddable,
-      openInPlayer: raw.openInPlayer !== false,
       aspectRatio: parseRatio(raw.aspectRatio),
       input: {
         keyboard: input.keyboard === true,
@@ -249,13 +248,9 @@
     return img;
   }
 
-  /**
-   * One game tile: its icon and its name, linking to the player, or straight
-   * to the game's page when it has "openInPlayer": false.
-   */
+  /** One game tile: its icon and its name, linking to the player. */
   function createTile(game, eager) {
-    var href = game.openInPlayer ? playUrl(game) : game.entry;
-    var link = AH.ui.el('a', { className: 'tile', href: href }, [
+    var link = AH.ui.el('a', { className: 'tile', href: playUrl(game) }, [
       AH.ui.el('div', { className: 'tile-thumb' }, [thumbnail(game, eager)]),
       AH.ui.el('span', { className: 'tile-name', text: game.title })
     ]);

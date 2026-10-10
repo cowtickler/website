@@ -13,12 +13,12 @@
   // Sandbox presets. Neither allows top-level navigation or popups, so a game
   // cannot send the player away from this site.
   //   standard: same-origin, so games can save progress and load their own
-  //             data files. Same-origin code is NOT isolated from the site,
-  //             which is why every game is reviewed before it is added.
+  //             data files and user-triggered save downloads. Same-origin code
+  //             is NOT isolated from the site, so every game is reviewed first.
   //   strict:   opaque origin. Safer, but the game cannot use localStorage,
   //             IndexedDB or fetch() of its own files.
   var SANDBOX = {
-    standard: 'allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-modals allow-orientation-lock',
+    standard: 'allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-modals allow-orientation-lock allow-downloads',
     strict: 'allow-scripts allow-pointer-lock'
   };
 

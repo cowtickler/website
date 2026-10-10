@@ -825,7 +825,7 @@
       "compatibility": {
         "performance": "medium",
         "lowEnd": "unknown",
-        "notes": "Requires the EmulatorJS CDN and the external game host. Saves are kept in this browser. Live gameplay still needs verification."
+        "notes": "Uses the self-hosted EmulatorJS runtime and the external game host. Saves are kept in this browser."
       },
       "isolation": "standard",
       "source": {
@@ -838,6 +838,121 @@
         "licenseUrl": "games/super-mario-world/ARCADEHUB_NOTES.md"
       },
       "added": "2026-10-08",
+      "status": "ready"
+    },
+    {
+      "id": "super-mario-64",
+      "title": "Super Mario 64",
+      "description": "Explore Princess Peach's castle and collect Power Stars in the Nintendo 64 platform adventure.",
+      "categories": [
+        "platformer",
+        "action"
+      ],
+      "tags": [
+        "n64",
+        "3d platformer",
+        "retro",
+        "single player"
+      ],
+      "entry": "games/super-mario-64/index.html",
+      "aspectRatio": "4:3",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": false,
+        "gamepad": true
+      },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Control Settings",
+          "action": "View or change the keyboard mapping"
+        },
+        {
+          "keys": "Touch controls",
+          "action": "Use the on-screen Nintendo 64 controller"
+        },
+        {
+          "keys": "Gamepad",
+          "action": "Use a connected controller"
+        }
+      ],
+      "compatibility": {
+        "performance": "heavy",
+        "lowEnd": "unknown",
+        "notes": "Uses the self-hosted EmulatorJS runtime and an external game-file host. Nintendo 64 emulation may perform poorly on low-end Chromebooks. Saves are kept in this browser."
+      },
+      "isolation": "standard",
+      "source": {
+        "type": "external",
+        "author": "Nintendo",
+        "authorUrl": "https://www.nintendo.com/",
+        "platform": "EmulatorJS demo page",
+        "url": "https://sites.google.com/view/emulatorjs/games/super-mario-64",
+        "license": "Game and assets: no redistribution license found; EmulatorJS: GPL-3.0",
+        "licenseUrl": "games/super-mario-64/ARCADEHUB_NOTES.md"
+      },
+      "added": "2026-10-10",
+      "status": "ready"
+    },
+    {
+      "id": "nba-jam",
+      "title": "NBA Jam",
+      "description": "Play fast-paced two-on-two arcade basketball with exaggerated dunks and classic commentary.",
+      "categories": [
+        "sports",
+        "arcade",
+        "multiplayer"
+      ],
+      "tags": [
+        "snes",
+        "basketball",
+        "arcade",
+        "two player"
+      ],
+      "entry": "games/nba-jam/index.html",
+      "aspectRatio": "4:3",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": false,
+        "gamepad": true
+      },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Control Settings",
+          "action": "View or change each player's keyboard mapping"
+        },
+        {
+          "keys": "Touch controls",
+          "action": "Use the on-screen Super Nintendo controller"
+        },
+        {
+          "keys": "Gamepads",
+          "action": "Use connected controllers for multiplayer"
+        }
+      ],
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "Uses the self-hosted EmulatorJS runtime and an external game-file host. Saves are kept in this browser. Multiplayer controls have not been verified."
+      },
+      "isolation": "standard",
+      "source": {
+        "type": "external",
+        "author": "Midway Games",
+        "authorUrl": "https://en.wikipedia.org/wiki/NBA_Jam_(1993_video_game)",
+        "platform": "EmulatorJS demo page",
+        "url": "https://sites.google.com/view/emulatorjs/games/nba-jam",
+        "license": "Game and assets: no redistribution license found; EmulatorJS: GPL-3.0",
+        "licenseUrl": "games/nba-jam/ARCADEHUB_NOTES.md"
+      },
+      "added": "2026-10-10",
       "status": "ready"
     }
   ]

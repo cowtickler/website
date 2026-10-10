@@ -37,3 +37,10 @@ public page at https://sites.google.com/view/emulatorjs/games/super-mario-world.
   host's authorization to distribute it were not established.
 - EmulatorJS keyboard, touch and gamepad support should be available, but
   gameplay still needs a live-browser check after deployment.
+
+## Thumbnail
+
+- On 2026-10-10, the site owner supplied a dog photo and requested it as this
+  game's thumbnail. A cropped 640 by 360 WebP derivative is stored in the
+  site's thumbnail folder. The original image's provenance and license were
+  not established.

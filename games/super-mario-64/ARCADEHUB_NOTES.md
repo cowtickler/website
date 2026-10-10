@@ -39,3 +39,10 @@ public page at https://sites.google.com/view/emulatorjs/games/super-mario-64.
   host's authorization to distribute it were not established.
 - Nintendo 64 emulation is demanding and may perform poorly on low-end
   Chromebooks. Keyboard, touch and gamepad support require live verification.
+
+## Thumbnail
+
+- On 2026-10-10, the site owner supplied an Albert Einstein photo and
+  requested it as this game's thumbnail. A cropped 640 by 360 WebP derivative
+  is stored in the site's thumbnail folder. The original image's provenance
+  and license were not established.

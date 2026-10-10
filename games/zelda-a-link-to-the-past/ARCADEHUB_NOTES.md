@@ -40,3 +40,10 @@ public page at https://sites.google.com/view/emulatorjs/games/zelda-a-link-to-th
   host's authorization to distribute it were not established.
 - The individual keyboard, touch and gamepad mappings were not manually
   exercised during the automated test.
+
+## Thumbnail
+
+- On 2026-10-10, the site owner supplied the picture used for this game's
+  thumbnail. A cropped 640 by 360 WebP derivative is stored in the site's
+  thumbnail folder. The original image's provenance and license were not
+  established.

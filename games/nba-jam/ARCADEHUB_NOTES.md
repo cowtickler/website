@@ -36,3 +36,10 @@ public page at https://sites.google.com/view/emulatorjs/games/nba-jam.
 - The game file is streamed from a third-party host. Its provenance and the
   host's authorization to distribute it were not established.
 - Keyboard, touch, multiplayer and gamepad support require live verification.
+
+## Thumbnail
+
+- On 2026-10-10, the site owner supplied a horse photo and requested it as
+  this game's thumbnail. A cropped 640 by 360 WebP derivative is stored in the
+  site's thumbnail folder. The original image's provenance and license were
+  not established.

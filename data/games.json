@@ -792,6 +792,7 @@
         "retro",
         "single player"
       ],
+      "thumbnail": "assets/thumbnails/super-mario-world.webp",
       "entry": "games/super-mario-world/index.html",
       "aspectRatio": "4:3",
       "titleBar": true,
@@ -854,6 +855,7 @@
         "retro",
         "single player"
       ],
+      "thumbnail": "assets/thumbnails/super-mario-64.webp",
       "entry": "games/super-mario-64/index.html",
       "aspectRatio": "4:3",
       "input": {
@@ -912,6 +914,7 @@
         "arcade",
         "two player"
       ],
+      "thumbnail": "assets/thumbnails/nba-jam.webp",
       "entry": "games/nba-jam/index.html",
       "aspectRatio": "4:3",
       "input": {
@@ -970,6 +973,7 @@
         "retro",
         "single player"
       ],
+      "thumbnail": "assets/thumbnails/zelda-a-link-to-the-past.webp",
       "entry": "games/zelda-a-link-to-the-past/index.html",
       "aspectRatio": "4:3",
       "input": {

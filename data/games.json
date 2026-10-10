@@ -954,6 +954,64 @@
       },
       "added": "2026-10-10",
       "status": "ready"
+    },
+    {
+      "id": "zelda-a-link-to-the-past",
+      "title": "The Legend of Zelda: A Link to the Past",
+      "description": "Explore Hyrule, solve dungeons and rescue Princess Zelda in the classic Super Nintendo adventure.",
+      "categories": [
+        "action",
+        "puzzle"
+      ],
+      "tags": [
+        "snes",
+        "adventure",
+        "zelda",
+        "retro",
+        "single player"
+      ],
+      "entry": "games/zelda-a-link-to-the-past/index.html",
+      "aspectRatio": "4:3",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": false,
+        "gamepad": true
+      },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Control Settings",
+          "action": "View or change the keyboard mapping"
+        },
+        {
+          "keys": "Touch controls",
+          "action": "Use the on-screen Super Nintendo controller"
+        },
+        {
+          "keys": "Gamepad",
+          "action": "Use a connected controller"
+        }
+      ],
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "Uses the self-hosted EmulatorJS runtime and an external game-file host. Saves are kept in this browser."
+      },
+      "isolation": "standard",
+      "source": {
+        "type": "external",
+        "author": "Nintendo",
+        "authorUrl": "https://www.nintendo.com/",
+        "platform": "EmulatorJS demo page",
+        "url": "https://sites.google.com/view/emulatorjs/games/zelda-a-link-to-the-past",
+        "license": "Game and assets: no redistribution license found; EmulatorJS: GPL-3.0",
+        "licenseUrl": "games/zelda-a-link-to-the-past/ARCADEHUB_NOTES.md"
+      },
+      "added": "2026-10-10",
+      "status": "ready"
     }
   ]
 }

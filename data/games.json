@@ -1064,6 +1064,48 @@
       },
       "added": "2026-10-11",
       "status": "ready"
+    },
+    {
+      "id": "tung-sahur-horror",
+      "title": "Tung Sahur Horror",
+      "description": "A first-person meme horror game: sneak through the dark, avoid Tung Tung Tung Sahur and escape before sunrise.",
+      "categories": [
+        "action"
+      ],
+      "tags": [
+        "horror",
+        "escape",
+        "meme",
+        "first person"
+      ],
+      "thumbnail": "assets/thumbnails/tung-sahur-horror.webp",
+      "entry": "https://1games.io/game/tung-sahur-horror/",
+      "sendReferrer": true,
+      "input": {
+        "keyboard": true,
+        "touch": false,
+        "mouse": true,
+        "gamepad": false
+      },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "compatibility": {
+        "performance": "heavy",
+        "lowEnd": "unknown",
+        "notes": "Framed from 1games.io with the embed link its game page offers (Embed / COPY), at the owner's request (2026-10-11). Unity WebGL; needs an internet connection, and 1games.io can show its own ads and analytics inside the frame."
+      },
+      "isolation": "standard",
+      "source": {
+        "type": "external",
+        "author": "1games.io",
+        "authorUrl": "https://1games.io/",
+        "platform": "1games.io",
+        "url": "https://1games.io/tung-sahur-horror",
+        "license": "Externally hosted; embed code offered by 1games.io"
+      },
+      "added": "2026-10-11",
+      "status": "ready"
     }
   ]
 }

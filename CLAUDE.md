@@ -71,3 +71,7 @@ Papa's Freezeria and Papa's Pizzeria (`"titleBar": true`, asked for by the owner
   the owner chose to frame Y8's unlisted embed page for Ball Fall 3D, which Y8
   offers only as a link (2026-10-09), and BlockBlast.game's `/game` page for
   Block Blast, which has no embed terms (2026-10-11).
+- The player frames games with no referrer. A framed game whose host will not
+  start without one gets `"sendReferrer": true` (origin only); so far only
+  Tung Sahur Horror (1games.io, 2026-10-11). It stays black on `localhost`
+  because 1games.io only accepts approved sites; test it on the published site.

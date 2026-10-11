@@ -112,6 +112,7 @@
       embeddable: embeddable,
       titleBar: raw.titleBar === true || /^https:/.test(entry),
       openInPlayer: raw.openInPlayer !== false,
+      sendReferrer: raw.sendReferrer === true && /^https:/.test(entry),
       aspectRatio: parseRatio(raw.aspectRatio),
       input: {
         keyboard: input.keyboard === true,

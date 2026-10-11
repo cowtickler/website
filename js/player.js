@@ -153,7 +153,9 @@
     frame.title = game.title;
     frame.setAttribute('sandbox', SANDBOX[game.isolation] || SANDBOX.standard);
     frame.setAttribute('allow', 'fullscreen; gamepad; autoplay');
-    frame.setAttribute('referrerpolicy', 'no-referrer');
+    // Games get no referrer, except a framed game marked "sendReferrer": true,
+    // which receives only this site's origin (its host refuses to start without one).
+    frame.setAttribute('referrerpolicy', game.sendReferrer ? 'strict-origin' : 'no-referrer');
     frame.addEventListener('load', onFrameLoad);
     $('frame-wrap').appendChild(frame);
     return frame;

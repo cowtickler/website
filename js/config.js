@@ -20,5 +20,5 @@ window.ArcadeHub.config = {
   // under games/. To show a game from another origin in the player, list that
   // origin here AND add it to frame-src in the Content-Security-Policy meta
   // tag of play.html. Only list sites that allow being framed.
-  externalOrigins: ['https://games.engineering.com', 'https://www.y8.com']
+  externalOrigins: ['https://games.engineering.com', 'https://www.y8.com', 'https://blockblast.game']
 };

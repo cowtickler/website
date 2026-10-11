@@ -69,4 +69,5 @@ Papa's Freezeria and Papa's Pizzeria (`"titleBar": true`, asked for by the owner
   (games.engineering.com) works this way. Check the site's headers and embed
   terms first, and frame only pages the site offers for embedding. Exception:
   the owner chose to frame Y8's unlisted embed page for Ball Fall 3D, which Y8
-  offers only as a link (2026-10-09).
+  offers only as a link (2026-10-09), and BlockBlast.game's `/game` page for
+  Block Blast, which has no embed terms (2026-10-11).

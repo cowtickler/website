@@ -1016,6 +1016,54 @@
       },
       "added": "2026-10-10",
       "status": "ready"
+    },
+    {
+      "id": "block-blast",
+      "title": "Block Blast",
+      "description": "Place colorful block pieces to complete rows and columns, clear the board and keep your run alive.",
+      "categories": [
+        "puzzle"
+      ],
+      "tags": [
+        "blocks",
+        "drag and drop",
+        "casual",
+        "high score"
+      ],
+      "thumbnail": "assets/thumbnails/block-blast.webp",
+      "entry": "https://blockblast.game/game",
+      "input": {
+        "keyboard": false,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Drag / touch",
+          "action": "Place a block on the board"
+        }
+      ],
+      "compatibility": {
+        "performance": "heavy",
+        "lowEnd": "unknown",
+        "notes": "Framed from BlockBlast.game's game page at the owner's request (2026-10-11); the site sends no framing restrictions but offers no embed terms. Unity WebGL, about 10 MB on first load. Needs an internet connection and BlockBlast.game shows its own Google ads and analytics inside the frame."
+      },
+      "isolation": "standard",
+      "source": {
+        "type": "external",
+        "author": "BlockBlast.game",
+        "authorUrl": "https://blockblast.game/",
+        "platform": "BlockBlast.game",
+        "url": "https://blockblast.game/",
+        "license": "All rights reserved / externally hosted (owner's choice)",
+        "licenseUrl": "https://blockblast.game/about"
+      },
+      "added": "2026-10-11",
+      "status": "ready"
     }
   ]
 }

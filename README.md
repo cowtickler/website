@@ -14,7 +14,7 @@ GitHub Pages hosting with no backend and no build step.
 | Player: the game fills the window, with a back button and fullscreen (games framed from another website, and games marked `titleBar`, also show their title, source and a reload button) | `play.html?id=<game-id>`, `js/player.js` |
 | Central game catalog (validated on load; unsafe entries are skipped) | `data/games.json`, `js/games.js` |
 | Games: 2048, Chess, Minesweeper, Pac-Man, Neon Snake, Fireboy & Watergirl (Forest Temple and Light Temple), Cookie Clicker, Basket Random, Papa's Freezeria, Papa's Pizzeria, Wordle | `games/` |
-| Games from other websites, framed in the player: Temple Run 2 (ENGINEERING.com), Ball Fall 3D (Y8) | `data/games.json` |
+| Games from other websites, framed in the player: Temple Run 2 (ENGINEERING.com), Ball Fall 3D (Y8), Block Blast (BlockBlast.game) | `data/games.json` |
 | Source and license notes for each game | `games/<game-id>/ARCADEHUB_NOTES.md` |
 | Catalog checker (optional, needs Node.js) | `tools/validate-catalog.mjs` |
 | Guide for adding open-source games | [`ADDING_GAMES.md`](ADDING_GAMES.md) |
@@ -56,6 +56,11 @@ owner's request, although Y8 offers that game to other sites only as a link.
 No files are copied for either. Both depend on those sites, which can stop
 them at any time, and school filters may block them; see their
 `ARCADEHUB_NOTES.md` files.
+
+Block Blast plays in the player from BlockBlast.game's game page
+(`https://blockblast.game/game`), at the owner's request. The site allows
+framing but offers no embed terms, and it shows its own ads and analytics
+inside the frame. Nothing is copied; it depends on that site.
 
 ## Project structure
 

@@ -52,7 +52,8 @@ Papa's Freezeria and Papa's Pizzeria (`"titleBar": true`, asked for by the owner
 - Games with license problems wait in `_incoming/` (git-ignored, never
   published); see their `ARCADEHUB_NOTES.md`. Exception: the owner chose to
   publish Minesweeper, Pac-Man, Fireboy & Watergirl and Cookie Clicker anyway
-  (2026-10-08), and Basket Random (2026-10-09); keep their notes. The owner removed Subway Surf and Subway
+  (2026-10-08), Basket Random (2026-10-09) and Block Blast (2026-10-11); keep
+  their notes. The owner removed Subway Surf and Subway
   Surfers on 2026-10-09.
 - Flash games use the one Ruffle copy in `vendor/ruffle/` (0.7.1 from npm;
   see its README to update). Test Ruffle in Playwright with `locale: 'en-US'`
@@ -69,8 +70,7 @@ Papa's Freezeria and Papa's Pizzeria (`"titleBar": true`, asked for by the owner
   (games.engineering.com) works this way. Check the site's headers and embed
   terms first, and frame only pages the site offers for embedding. Exception:
   the owner chose to frame Y8's unlisted embed page for Ball Fall 3D, which Y8
-  offers only as a link (2026-10-09), and BlockBlast.game's `/game` page for
-  Block Blast, which has no embed terms (2026-10-11).
+  offers only as a link (2026-10-09).
 - The player frames games with no referrer. A framed game whose host will not
   start without one gets `"sendReferrer": true` (origin only); so far only
   Tung Sahur Horror (1games.io, 2026-10-11). It stays black on `localhost`

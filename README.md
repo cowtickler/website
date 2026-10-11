@@ -13,8 +13,8 @@ GitHub Pages hosting with no backend and no build step.
 | Homepage: a grid of game icons, nothing else | `index.html`, `js/app.js` |
 | Player: the game fills the window, with a back button and fullscreen (games framed from another website, and games marked `titleBar`, also show their title, source and a reload button) | `play.html?id=<game-id>`, `js/player.js` |
 | Central game catalog (validated on load; unsafe entries are skipped) | `data/games.json`, `js/games.js` |
-| Games: 2048, Chess, Minesweeper, Pac-Man, Neon Snake, Fireboy & Watergirl (Forest Temple and Light Temple), Cookie Clicker, Basket Random, Papa's Freezeria, Papa's Pizzeria, Wordle | `games/` |
-| Games from other websites, framed in the player: Temple Run 2 (ENGINEERING.com), Ball Fall 3D (Y8), Block Blast (BlockBlast.game), Tung Sahur Horror (1games.io) | `data/games.json` |
+| Games: 2048, Chess, Minesweeper, Pac-Man, Neon Snake, Fireboy & Watergirl (Forest Temple and Light Temple), Cookie Clicker, Basket Random, Papa's Freezeria, Papa's Pizzeria, Wordle, Block Blast | `games/` |
+| Games from other websites, framed in the player: Temple Run 2 (ENGINEERING.com), Ball Fall 3D (Y8), Tung Sahur Horror (1games.io) | `data/games.json` |
 | Source and license notes for each game | `games/<game-id>/ARCADEHUB_NOTES.md` |
 | Catalog checker (optional, needs Node.js) | `tools/validate-catalog.mjs` |
 | Guide for adding open-source games | [`ADDING_GAMES.md`](ADDING_GAMES.md) |
@@ -57,10 +57,11 @@ No files are copied for either. Both depend on those sites, which can stop
 them at any time, and school filters may block them; see their
 `ARCADEHUB_NOTES.md` files.
 
-Block Blast plays in the player from BlockBlast.game's game page
-(`https://blockblast.game/game`), at the owner's request. The site allows
-framing but offers no embed terms, and it shows its own ads and analytics
-inside the frame. Nothing is copied; it depends on that site.
+Block Blast is BlockBlast.game's Unity WebGL build, hosted in
+`games/block-blast/` at the owner's request. Its game files are copied
+unchanged, without that site's ads and analytics. BlockBlast.game reserves
+all rights and offers no license, so it could be taken down; see
+`games/block-blast/ARCADEHUB_NOTES.md`.
 
 Tung Sahur Horror plays in the player from 1games.io, using the embed link
 its game page offers. 1games.io only starts the game when it can see which
@@ -92,7 +93,8 @@ gaming-website/
 │   ├── fireboy-watergirl/  Flash game played with Ruffle
 │   ├── papas-freezeria/    Flash game played with Ruffle
 │   ├── papas-pizzeria/     Flash game played with Ruffle
-│   └── wordle/             Static English Wordle (MIT code, word lists flagged)
+│   ├── wordle/             Static English Wordle (MIT code, word lists flagged)
+│   └── block-blast/        Unity WebGL build from BlockBlast.game (no license)
 ├── vendor/ruffle/          Ruffle (Flash emulator), shared by the Flash games
 ├── assets/
 │   ├── thumbnails/         640x360 WebP icons, named <game-id>.webp

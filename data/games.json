@@ -1031,7 +1031,7 @@
         "high score"
       ],
       "thumbnail": "assets/thumbnails/block-blast.webp",
-      "entry": "https://blockblast.game/game",
+      "entry": "games/block-blast/index.html",
       "input": {
         "keyboard": false,
         "touch": true,
@@ -1050,17 +1050,15 @@
       "compatibility": {
         "performance": "heavy",
         "lowEnd": "unknown",
-        "notes": "Framed from BlockBlast.game's game page at the owner's request (2026-10-11); the site sends no framing restrictions but offers no embed terms. Unity WebGL, about 10 MB on first load. Needs an internet connection and BlockBlast.game shows its own Google ads and analytics inside the frame."
+        "notes": "Hosted on this site at the owner's request (2026-10-11): BlockBlast.game's Unity WebGL build, copied unchanged, with that site's ads and analytics left out. About 10 MB on first load."
       },
       "isolation": "standard",
       "source": {
-        "type": "external",
+        "type": "third-party",
         "author": "BlockBlast.game",
         "authorUrl": "https://blockblast.game/",
-        "platform": "BlockBlast.game",
-        "url": "https://blockblast.game/",
-        "license": "All rights reserved / externally hosted (owner's choice)",
-        "licenseUrl": "https://blockblast.game/about"
+        "license": "None (all rights reserved); hosted at owner's request",
+        "licenseUrl": "games/block-blast/ARCADEHUB_NOTES.md"
       },
       "added": "2026-10-11",
       "status": "ready"

@@ -514,6 +514,58 @@
     },
     {
       "categories": [
+        "sports",
+        "multiplayer"
+      ],
+      "tags": [
+        "soccer",
+        "2 players",
+        "physics"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "W",
+          "action": "Player 1 jumps and kicks"
+        },
+        {
+          "keys": "Up arrow",
+          "action": "Player 2 jumps and kicks"
+        },
+        {
+          "keys": "Tap",
+          "action": "Play on a touch screen"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-20",
+      "status": "ready",
+      "id": "soccer-random",
+      "title": "Soccer Random",
+      "description": "Floppy two-on-two soccer with one button per team: play the computer or a friend on the same keyboard. Every goal changes the pitch, the ball and the players.",
+      "thumbnail": "assets/thumbnails/soccer-random.webp",
+      "entry": "games/soccer-random/index.html",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "light",
+        "lowEnd": "unknown",
+        "notes": "A copy of the Construct 3 build from 77pen.github.io (the game framed by soccerrandomx.bitbucket.io), hosted at the owner's request. No ads or trackers in this copy."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "RHM Interactive",
+        "license": "None (copyrighted; unofficial copy)"
+      }
+    },
+    {
+      "categories": [
         "action",
         "arcade"
       ],

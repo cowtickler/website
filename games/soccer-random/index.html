@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- ArcadeHub: the Content-Security-Policy below stops the game from contacting other websites. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob:; worker-src 'self' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <title>Soccer Random</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <link rel="manifest" href="appmanifest.json">
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<script>
+    window.addEventListener("keydown", function (e) {
+        // space and arrow keys
+        if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+            e.preventDefault();
+        }
+    }, false);
+</script>
+
+<body>
+    <div id="fb-root"></div>
+    <!-- ArcadeHub: like Basket Random (same developer and engine), the game's physics moves a fixed
+         1/60 s per screen refresh, so on 120 Hz or 144 Hz screens it would run 2 to 2.4 times too fast.
+         This lets the game run at most 60 times a second, like on a normal 60 Hz screen (copied from
+         games/basket-random). It changes nothing on 60 Hz screens. -->
+    <script>
+    (function () {
+        var raf = window.requestAnimationFrame.bind(window);
+        var caf = window.cancelAnimationFrame.bind(window);
+        var step = 1000 / 60, next = 0, frameTime = -1, ids = {}, count = 0;
+        window.requestAnimationFrame = function (callback) {
+            var id = ++count;
+            function run(t) {
+                // Every callback of an accepted screen refresh runs; other refreshes are skipped.
+                if (t !== frameTime) {
+                    if (t < next - 2) { ids[id] = raf(run); return; }
+                    next = t - next < 100 ? next + step : t + step;
+                    frameTime = t;
+                }
+                delete ids[id];
+                callback(t);
+            }
+            ids[id] = raf(run);
+            return id;
+        };
+        window.cancelAnimationFrame = function (id) {
+            if (id in ids) { caf(ids[id]); delete ids[id]; }
+        };
+    })();
+    </script>
+    <script src="box2d.wasm.js"></script>
+    <noscript>
+        <div id="notSupportedWrap">
+            <h2 id="notSupportedTitle">This content requires JavaScript</h2>
+            <p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+            <p class="notSupportedMessage">This content was built with Construct 3&mdash;a <a
+                    href="https://www.construct.net/en">free game maker</a>.</p>
+        </div>
+    </noscript>
+    <script src="scripts/supportcheck.js"></script>
+    <script src="scripts/offlineclient.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/register-sw.js"></script>
+</body>
+
+</html>

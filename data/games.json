@@ -1207,6 +1207,53 @@
         "author": "Unknown CodePen author (probably Steve Gardner)",
         "license": "Unclear (probably MIT as a public CodePen pen)"
       }
+    },
+    {
+      "id": "water-color-sort",
+      "title": "Water Color Sort",
+      "description": "Pour colored water between tubes until every tube holds a single color. Plan your moves, there is only so much room.",
+      "categories": [
+        "puzzle"
+      ],
+      "tags": [
+        "sorting",
+        "colors",
+        "casual",
+        "levels"
+      ],
+      "thumbnail": "assets/thumbnails/water-color-sort.webp",
+      "entry": "games/water-color-sort/index.html",
+      "aspectRatio": "9:16",
+      "input": {
+        "keyboard": false,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Click / tap",
+          "action": "Pick a tube, then the tube to pour into"
+        }
+      ],
+      "compatibility": {
+        "performance": "light",
+        "lowEnd": "unknown",
+        "notes": "A copy of the Cocos Creator game from 77pen.github.io (the game framed by soccerrandomx.bitbucket.io), hosted at the owner's request. Ads removed; the watch-an-ad buttons give their reward for free. About 9 MB."
+      },
+      "isolation": "standard",
+      "source": {
+        "type": "third-party",
+        "author": "Vnstart LLC",
+        "authorUrl": "https://vnstart.com/",
+        "license": "None (all rights reserved); hosted at owner's request",
+        "licenseUrl": "games/water-color-sort/ARCADEHUB_NOTES.md"
+      },
+      "added": "2026-10-20",
+      "status": "ready"
     }
   ]
 }

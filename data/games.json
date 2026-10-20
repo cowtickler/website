@@ -457,6 +457,58 @@
     },
     {
       "categories": [
+        "sports",
+        "multiplayer"
+      ],
+      "tags": [
+        "volleyball",
+        "2 players",
+        "physics"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "W",
+          "action": "Player 1 jumps and hits"
+        },
+        {
+          "keys": "Up arrow",
+          "action": "Player 2 jumps and hits"
+        },
+        {
+          "keys": "Tap",
+          "action": "Play on a touch screen"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-20",
+      "status": "ready",
+      "id": "volley-random",
+      "title": "Volley Random",
+      "description": "Floppy two-on-two volleyball with one button per team: play the computer or a friend on the same keyboard.",
+      "thumbnail": "assets/thumbnails/volley-random.webp",
+      "entry": "games/volley-random/index.html",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "light",
+        "lowEnd": "unknown",
+        "notes": "A copy of the Construct 3 build from 77pen.github.io (the game framed by soccerrandomx.bitbucket.io), hosted at the owner's request. No ads or trackers in this copy."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "RHM Interactive",
+        "license": "None (copyrighted; unofficial copy)"
+      }
+    },
+    {
+      "categories": [
         "racing",
         "action"
       ],
@@ -516,58 +568,6 @@
       "source": {
         "type": "third-party",
         "author": "MadPuffers",
-        "license": "None (copyrighted; unofficial copy)"
-      }
-    },
-    {
-      "categories": [
-        "sports",
-        "multiplayer"
-      ],
-      "tags": [
-        "volleyball",
-        "2 players",
-        "physics"
-      ],
-      "fullscreen": true,
-      "featured": false,
-      "popular": false,
-      "controls": [
-        {
-          "keys": "W",
-          "action": "Player 1 jumps and hits"
-        },
-        {
-          "keys": "Up arrow",
-          "action": "Player 2 jumps and hits"
-        },
-        {
-          "keys": "Tap",
-          "action": "Play on a touch screen"
-        }
-      ],
-      "isolation": "standard",
-      "added": "2026-10-20",
-      "status": "ready",
-      "id": "volley-random",
-      "title": "Volley Random",
-      "description": "Floppy two-on-two volleyball with one button per team: play the computer or a friend on the same keyboard.",
-      "thumbnail": "assets/thumbnails/volley-random.webp",
-      "entry": "games/volley-random/index.html",
-      "input": {
-        "keyboard": true,
-        "touch": true,
-        "mouse": true,
-        "gamepad": false
-      },
-      "compatibility": {
-        "performance": "light",
-        "lowEnd": "unknown",
-        "notes": "A copy of the Construct 3 build from 77pen.github.io (the game framed by soccerrandomx.bitbucket.io), hosted at the owner's request. No ads or trackers in this copy."
-      },
-      "source": {
-        "type": "third-party",
-        "author": "RHM Interactive",
         "license": "None (copyrighted; unofficial copy)"
       }
     },

@@ -1289,6 +1289,49 @@
         "author": "Unknown (a Poki game)",
         "license": "None found (copyrighted game, unofficial copy)"
       }
+    },
+    {
+      "categories": [
+        "action"
+      ],
+      "tags": [
+        "shooting",
+        "physics",
+        "levels"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Mouse or touch",
+          "action": "Drag to aim and set power, release to shoot"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-20",
+      "status": "ready",
+      "id": "raft-wars",
+      "title": "Raft Wars",
+      "description": "Defend your treasure from your raft: aim, set the power and soak the enemies with water balloons, grenades and rockets across 13 levels. Spend coins on upgrades between levels.",
+      "thumbnail": "assets/thumbnails/raft-wars.webp",
+      "entry": "games/raft-wars/index.html",
+      "input": {
+        "keyboard": false,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "light",
+        "lowEnd": "unknown",
+        "notes": "A copy of the Phaser HTML5 build from 77pen.github.io (the game framed by soccerrandomx.bitbucket.io), hosted at the owner's request. Poki ads and trackers removed. Sound uses OGG files only (the MP3 copies were missing on the source site)."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "Martijn Kunst",
+        "license": "None (copyrighted; unofficial copy)"
+      }
     }
   ]
 }

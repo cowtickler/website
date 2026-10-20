@@ -1254,6 +1254,41 @@
       },
       "added": "2026-10-20",
       "status": "ready"
+    },
+    {
+      "id": "sausage-flip",
+      "title": "Sausage Flip",
+      "description": "Flip a bendy sausage across the level and land it on the finish. Pull back to aim, let go to jump, and unlock silly skins as you go.",
+      "categories": ["arcade"],
+      "tags": ["physics", "flip", "3d", "casual"],
+      "thumbnail": "assets/thumbnails/sausage-flip.webp",
+      "entry": "games/sausage-flip/index.html",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        { "keys": "Drag and release (mouse or touch)", "action": "Aim and flip the sausage" },
+        { "keys": "Left / Right arrows, then Space", "action": "Aim and flip with the keyboard" }
+      ],
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "A copy of the PlayCanvas game from 77pen.github.io (the game framed by soccerrandomx.bitbucket.io), hosted at the owner's request. Uses WebGL and about 8 MB of files. Poki's ad SDK replaced by a do-nothing stand-in, so no ads or trackers."
+      },
+      "isolation": "standard",
+      "added": "2026-10-20",
+      "status": "ready",
+      "source": {
+        "type": "third-party",
+        "author": "Unknown (a Poki game)",
+        "license": "None found (copyrighted game, unofficial copy)"
+      }
     }
   ]
 }

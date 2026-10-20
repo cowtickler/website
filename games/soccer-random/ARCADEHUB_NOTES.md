@@ -20,7 +20,7 @@ This is an unofficial copy of a copyrighted game, hosted without permission, lik
 - Added a Content-Security-Policy to `index.html` so the page cannot contact other websites (same policy as Basket Random).
 
 ## Changes made
-- `index.html`: added the Content-Security-Policy and the 60-frames-a-second cap from Basket Random (both marked `ArcadeHub:`). The two games share the same project setup, so Soccer Random would also run too fast on 120 Hz and 144 Hz screens without it.
+- `index.html`: added the Content-Security-Policy and the 60-frames-a-second cap from Basket Random (both marked `ArcadeHub:`). The two games share the same project setup, so Soccer Random would also run too fast on 120 Hz and 144 Hz screens without it. Measured on 2026-10-20 with a simulated 60, 120 and 144 Hz screen: without the cap the game ran 63, 125 and 156 ticks a second (up to 2.6 times too fast); with it, 60 on all three, the same as Basket Random.
 - Nothing else was changed.
 
 ## Controls

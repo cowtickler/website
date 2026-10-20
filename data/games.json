@@ -509,6 +509,65 @@
     },
     {
       "categories": [
+        "sports",
+        "multiplayer"
+      ],
+      "tags": [
+        "basketball",
+        "2 players"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Arrows or W A S D",
+          "action": "Move and jump (double-tap left or right to dash)"
+        },
+        {
+          "keys": "X or L",
+          "action": "Shoot"
+        },
+        {
+          "keys": "Z or K",
+          "action": "Super shot"
+        },
+        {
+          "keys": "Down or S",
+          "action": "Block or steal"
+        },
+        {
+          "keys": "2 players",
+          "action": "Player 1: W A S D, B shoot, V super shot. Player 2: arrows, L shoot, K super shot"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-20",
+      "status": "ready",
+      "id": "basketball-stars",
+      "title": "Basketball Stars",
+      "description": "One-on-one basketball with big-headed stars: dunk, block and steal against the computer or a friend on the same keyboard.",
+      "thumbnail": "assets/thumbnails/basketball-stars.webp",
+      "entry": "games/basketball-stars/index.html",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "A copy of the Phaser build from basketball-stars.io (the game framed by soccerrandomx.bitbucket.io), hosted at the owner's request. Its ad script was removed and its four outside scripts are stored on the site, so it loads nothing from other websites."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "MadPuffers",
+        "license": "None (copyrighted commercial game; unofficial copy)"
+      }
+    },
+    {
+      "categories": [
         "racing",
         "action"
       ],

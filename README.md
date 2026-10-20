@@ -13,7 +13,7 @@ GitHub Pages hosting with no backend and no build step.
 | Homepage: a grid of game icons, nothing else | `index.html`, `js/app.js` |
 | Player: the game fills the window, with a back button and fullscreen (games framed from another website, and games marked `titleBar`, also show their title, source and a reload button) | `play.html?id=<game-id>`, `js/player.js` |
 | Central game catalog (validated on load; unsafe entries are skipped) | `data/games.json`, `js/games.js` |
-| Games: 2048, Chess, Minesweeper, Pac-Man, Neon Snake, Fireboy & Watergirl (Forest Temple and Light Temple), Cookie Clicker, Basket Random, Papa's Freezeria, Papa's Pizzeria, Wordle, Block Blast | `games/` |
+| Games: 2048, Minesweeper, Pac-Man, Fireboy & Watergirl (Forest Temple and Light Temple), Cookie Clicker, Basket Random, Papa's Freezeria, Papa's Pizzeria, Wordle, Block Blast | `games/` |
 | Games from other websites, framed in the player: Temple Run 2 (ENGINEERING.com), Ball Fall 3D (Y8), Tung Sahur Horror (1games.io) | `data/games.json` |
 | Source and license notes for each game | `games/<game-id>/ARCADEHUB_NOTES.md` |
 | Catalog checker (optional, needs Node.js) | `tools/validate-catalog.mjs` |
@@ -86,10 +86,8 @@ gaming-website/
 ├── data/games.json         THE game catalog
 ├── games/                  One folder per game (its own files + license)
 │   ├── 2048/
-│   ├── chess/
 │   ├── minesweeper/
 │   ├── pacman/
-│   ├── neon-snake/
 │   ├── fireboy-watergirl/  Flash game played with Ruffle
 │   ├── papas-freezeria/    Flash game played with Ruffle
 │   ├── papas-pizzeria/     Flash game played with Ruffle

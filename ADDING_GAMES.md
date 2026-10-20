@@ -199,8 +199,7 @@ To add a category, add `{ "id": "rhythm", "name": "Rhythm" }` to
 ### 9. Record what you did
 
 Create `games/<game-id>/ARCADEHUB_NOTES.md` with the source URL and commit,
-license, review findings, build commands, and every change you made (see
-`games/neon-snake/ARCADEHUB_NOTES.md` for the format).
+license, review findings, build commands, and every change you made.
 
 ## Flagging a game for review
 

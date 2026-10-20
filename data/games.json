@@ -1047,6 +1047,50 @@
       },
       "added": "2026-10-11",
       "status": "ready"
+    },
+    {
+      "categories": [
+        "arcade"
+      ],
+      "tags": [
+        "stacking",
+        "timing",
+        "3d",
+        "one button"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Click, tap or Space",
+          "action": "Drop the moving block"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-20",
+      "status": "ready",
+      "id": "stack",
+      "title": "Stack",
+      "description": "Drop each sliding block onto the tower. Whatever hangs over the edge is cut off, so line them up perfectly to build as high as you can.",
+      "thumbnail": "assets/thumbnails/stack.webp",
+      "entry": "games/stack/index.html",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "light",
+        "lowEnd": "unknown",
+        "notes": "A copy of the Three.js game from 77pen.github.io (the game framed by soccerrandomx.bitbucket.io), hosted at the owner's request. Uses WebGL. No ads or trackers."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "Unknown CodePen author (probably Steve Gardner)",
+        "license": "Unclear (probably MIT as a public CodePen pen)"
+      }
     }
   ]
 }

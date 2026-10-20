@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <!-- ArcadeHub: the Content-Security-Policy below stops the game from contacting other websites. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; worker-src 'self' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css">
+    <title>
+        Moto X3M Winter
+    </title>
+	<meta name="description" content="Moto X3M provides players with some Winter wonderland fun without sacrificing any of the action that comes with racing games.">
+	<meta name="robots" content="noindex,nofollow" />
+</head>
+
+<body>
+
+    <div id="content" style="display: block;"></div>
+    <div id="orientation" style="display: none;"></div>
+    <div id="loader" style="display: none;">Loading ...</div>
+
+    <!-- ArcadeHub: the original page loaded the Poki ad SDK. poki-stub.js stands in for it, so there are
+         no ads or trackers; "watch an ad" rewards are given straight away. -->
+    <script src="poki-stub.js"></script>
+    <!-- ArcadeHub: Phaser runs one game update per screen refresh, so on 120 Hz or 144 Hz screens the game
+         would run 2 to 2.4 times too fast. This lets the game run at most 60 times a second, like on a
+         normal 60 Hz screen (copied from games/basket-random). It changes nothing on 60 Hz screens. -->
+    <script>
+    (function () {
+        var raf = window.requestAnimationFrame.bind(window);
+        var caf = window.cancelAnimationFrame.bind(window);
+        var step = 1000 / 60, next = 0, frameTime = -1, ids = {}, count = 0;
+        window.requestAnimationFrame = function (callback) {
+            var id = ++count;
+            function run(t) {
+                // Every callback of an accepted screen refresh runs; other refreshes are skipped.
+                if (t !== frameTime) {
+                    if (t < next - 2) { ids[id] = raf(run); return; }
+                    next = t - next < 100 ? next + step : t + step;
+                    frameTime = t;
+                }
+                delete ids[id];
+                callback(t);
+            }
+            ids[id] = raf(run);
+            return id;
+        };
+        window.cancelAnimationFrame = function (id) {
+            if (id in ids) { caf(ids[id]); delete ids[id]; }
+        };
+    })();
+    </script>
+
+
+    <script type="text/javascript" src="assets/lib/nape.min.js">
+        var nape = "nape.min.js";
+    </script>
+    <script type="text/javascript" src="assets/lib/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/lib/easeljs-0.8.2.combined.js"></script>
+    <script type="text/javascript" src="assets/lib/bluebird.min.js"></script>
+    <script type="text/javascript" src="assets/lib/phaser.min.js"></script>
+    <script type="text/javascript" src="assets/lib/phaser-cachebuster.min.js"></script>
+    <script type="text/javascript" src="assets/lib/phaser-super-storage.min.js"></script>
+    <script type="text/javascript" src="assets/lib/dragonBones.min.js"></script>
+
+	<script type="text/javascript" src="motox3m.min.js?v=2"></script>
+</body></html>

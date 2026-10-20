@@ -457,6 +457,70 @@
     },
     {
       "categories": [
+        "racing",
+        "action"
+      ],
+      "tags": [
+        "motorbike",
+        "stunts",
+        "physics"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Up arrow or W",
+          "action": "Accelerate"
+        },
+        {
+          "keys": "Down arrow or S",
+          "action": "Brake and reverse"
+        },
+        {
+          "keys": "Left/Right arrows or A/D",
+          "action": "Lean back and forward (flips)"
+        },
+        {
+          "keys": "R",
+          "action": "Restart from the checkpoint"
+        },
+        {
+          "keys": "P or Esc",
+          "action": "Pause"
+        },
+        {
+          "keys": "On-screen buttons",
+          "action": "Play on a touch screen"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-20",
+      "status": "ready",
+      "id": "moto-x3m-winter",
+      "title": "Moto X3M Winter",
+      "description": "Ride a dirt bike through 25 snowy stunt tracks full of ramps, loops and traps. Do flips to cut seconds off your time and earn up to three stars per level.",
+      "thumbnail": "assets/thumbnails/moto-x3m-winter.webp",
+      "entry": "games/moto-x3m-winter/index.html",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "A copy of the Phaser 2 build from 77pen.github.io (the game framed by soccerrandomx.bitbucket.io), hosted at the owner's request. About 15 MB. The Poki ad SDK is replaced by a stub, so there are no ads or trackers."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "MadPuffers",
+        "license": "None (copyrighted; unofficial copy)"
+      }
+    },
+    {
+      "categories": [
         "sports",
         "multiplayer"
       ],

@@ -1332,6 +1332,54 @@
         "author": "Martijn Kunst",
         "license": "None (copyrighted; unofficial copy)"
       }
+    },
+    {
+      "categories": [
+        "sports",
+        "multiplayer"
+      ],
+      "tags": [
+        "pool",
+        "billiards",
+        "2 player"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Mouse",
+          "action": "Move to aim, then hold the button on the table and drag back to set power; let go to shoot"
+        },
+        {
+          "keys": "Touch",
+          "action": "Drag on the table to aim, then drag the power cue on the left edge down and let go to shoot"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-20",
+      "status": "ready",
+      "id": "8-ball-pool",
+      "title": "8 Ball Pool",
+      "description": "Classic 8 ball pool against the computer or a friend on the same screen. Sped up to twice the normal speed.",
+      "thumbnail": "assets/thumbnails/8-ball-pool.webp",
+      "entry": "games/8-ball-pool/index.html",
+      "input": {
+        "keyboard": false,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "light",
+        "lowEnd": "unknown",
+        "notes": "A copy of Famobi's 8 Ball Billiards Classic (Phaser 2) from 77pen.github.io (the game framed by soccerrandomx.bitbucket.io), hosted at the owner's request and set to run twice as fast (ARCADEHUB_GAME_SPEED in its index.html). No ads or trackers."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "Famobi",
+        "license": "None (copyrighted; unofficial copy)"
+      }
     }
   ]
 }

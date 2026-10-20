@@ -1,0 +1,73 @@
+<html>
+<head>
+
+   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+   <meta content="utf-8" http-equiv="encoding">
+   <!-- ArcadeHub: the Content-Security-Policy below stops the game from contacting other websites. -->
+   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; worker-src 'self' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+   <meta property="og:image" content="8-ball-billiards-classic.png" />
+
+   <title>8 Ball Pool</title>
+   <meta name="robots" content="noindex,nofollow" />
+   <style>
+      html,body { background: #000000; }
+   </style>
+
+   <!-- ArcadeHub: game speed. The owner asked for the game to play twice as fast (2026-10-20).
+        The game moves the balls one fixed step per game update, and Phaser normally runs one update per
+        screen refresh, so the original went faster on 120/144 Hz screens. This runs the updates on a fixed
+        clock instead: GAME_SPEED x 60 updates a second on every screen (2 = twice the original 60 Hz speed,
+        1 = original speed). Menus, animations and the AI's thinking pauses keep real time; the in-game clock
+        is kept in real seconds. -->
+   <script>
+      window.ARCADEHUB_GAME_SPEED = 2;
+      (function () {
+         var speed = window.ARCADEHUB_GAME_SPEED;
+         var timer = setInterval(function () {
+            var g = window.game;
+            if (!g || !g.isBooted || !g.time) return;
+            clearInterval(timer);
+            // Phaser 2: allow several updates per refresh, each 1/60 s of game time, every 1/(60 x speed) s.
+            g.forceSingleUpdate = false;
+            g.time.slowMotion = 1 / speed;
+            // Phaser skips a frame's updates when their count rises two frames in a row ("spiraling"),
+            // which happens all the time on 120 Hz screens here; the count is already capped at 3 a frame.
+            var update = g.update;
+            g.update = function (time) { g._spiraling = 0; return update.call(g, time); };
+            // The clock counts game updates (60 = 1 second), so count 1/speed per update.
+            if (typeof window.updateTimer === "function") {
+               window.updateTimer = function () {
+                  var t = window.playState && window.playState.gameInfo;
+                  if (!t || !t.timerStarted || window.projectInfo.tutorial != 0) return;
+                  t.time += 1 / speed;
+                  var e = Math.floor(t.time / 60), a = Math.floor(e / 60), i = Math.ceil(e % 60);
+                  t.timerText.text = a + ":" + (i < 10 ? "0" + i : i);
+               };
+            }
+         }, 50);
+      })();
+   </script>
+   <script>
+      window.famobi_gameID = "8-ball-billiards-classic";
+      window.famobi_gameJS = ['js/all.js',
+         function() {
+
+         }
+      ];
+      (function (document, url, fgJS, firstJS) {
+        fgJS = document.createElement('script');
+        firstJS = document.getElementsByTagName('script')[0];
+        fgJS.src = url + encodeURIComponent(document.location.href);
+        firstJS.parentNode.insertBefore(fgJS, firstJS);
+      })(document, 'js/start.js?e=');
+   </script>
+</head>
+
+<body>
+  <center>
+      <div id="mygame"></div>
+  </center>
+</body>
+
+</html>

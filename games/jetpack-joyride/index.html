@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- ArcadeHub: the Content-Security-Policy below stops the game from contacting other websites. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; worker-src 'self' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <title>Jetpack Joyride</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="icon" href="splash.jpg" />
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <script type="text/javascript" src="engine/phaser-3.24.1.min.js"></script>
+    <!-- ArcadeHub: no-ads stand-in for the game's ad SDK (see the file and ARCADEHUB_NOTES.md). -->
+    <script type="text/javascript" id="gamedistribution-jssdk" src="arcadehub-no-ads.js"></script>
+    <script type="text/javascript" src="game3.js"></script>
+  
+  </head>
+  <body>
+    <div class="fontLoader" style="font-family: jetpackia;">-</div>
+    <img id="rotate_image" src="img/HB_ic_rotateScreen.png" alt="rotate_screen" class="center" />
+    <div id="content">
+      <div id="phaser-canvas"></div>
+    </div>
+  </body>
+</html>

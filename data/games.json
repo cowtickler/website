@@ -1475,6 +1475,50 @@
         "author": "Google",
         "license": "None (copyrighted by Google; unofficial copy)"
       }
+    },
+    {
+      "id": "age-of-war",
+      "title": "Age of War",
+      "description": "Defend your base and destroy the enemy's: train units, build turrets and evolve from the Stone Age to the future across five ages.",
+      "categories": [
+        "strategy"
+      ],
+      "tags": [
+        "defense",
+        "war",
+        "evolution"
+      ],
+      "thumbnail": "assets/thumbnails/age-of-war.webp",
+      "entry": "games/age-of-war/index.html",
+      "aspectRatio": "16:9",
+      "input": {
+        "keyboard": false,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Mouse or tap",
+          "action": "Train units, build turrets, evolve and use the special attack"
+        }
+      ],
+      "compatibility": {
+        "performance": "light",
+        "lowEnd": "unknown",
+        "notes": "A copy of the HTML5 (Phaser) version from 77pen.github.io (the game framed by soccerrandomx.bitbucket.io), hosted at the owner's request. Its GameDistribution ad script was replaced by a blank stand-in and the page cannot contact other websites. Sounds are .ogg only, so old Safari/iPhone versions may be silent."
+      },
+      "isolation": "standard",
+      "added": "2026-10-21",
+      "status": "ready",
+      "source": {
+        "type": "third-party",
+        "author": "Louissi / Max Games (HTML5 version published by Azerion)",
+        "license": "None (copyrighted game; unofficial copy)"
+      }
     }
   ]
 }

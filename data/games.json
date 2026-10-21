@@ -1551,6 +1551,53 @@
       },
       "added": "2026-10-21",
       "status": "ready"
+    },
+    {
+      "categories": [
+        "action",
+        "arcade"
+      ],
+      "tags": [
+        "endless runner",
+        "jetpack"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Hold mouse button or touch",
+          "action": "Fire the jetpack to fly up (let go to fall)"
+        },
+        {
+          "keys": "Click or tap",
+          "action": "Menus, vehicles and items"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-21",
+      "status": "ready",
+      "id": "jetpack-joyride",
+      "title": "Jetpack Joyride",
+      "description": "Barry Steakfries flies a stolen jetpack through a secret lab: hold to fly, let go to fall, dodge zappers, lasers and missiles, and grab coins and vehicles as you go.",
+      "thumbnail": "assets/thumbnails/jetpack-joyride.webp",
+      "entry": "games/jetpack-joyride/index.html",
+      "input": {
+        "keyboard": false,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "A copy of Halfbrick's Phaser 3 web version from 77pen.github.io (the game framed by soccerrandomx.bitbucket.io), hosted at the owner's request. Its ad SDK is replaced by a local no-ads stand-in (rewards are free) and the page cannot contact other websites. Mouse or touch only; no keyboard controls."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "Halfbrick Studios",
+        "license": "None (copyrighted Halfbrick game; unofficial copy)"
+      }
     }
   ]
 }

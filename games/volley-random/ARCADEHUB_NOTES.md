@@ -18,6 +18,7 @@ This is an unofficial copy of a copyrighted game, hosted without permission, lik
 
 ## Changes made
 - `index.html`: added the Content-Security-Policy and the 60-frames-a-second cap from Soccer Random (both marked `ArcadeHub:`), removed the original's "- topVAZ" title suffix. Measured on 2026-10-20 with a simulated 60, 120 and 144 Hz screen: without the cap the game ran 60, 120 and 144 ticks a second (up to 2.4 times too fast); with it, 60 on all three, the same as Basket Random and Soccer Random.
+- **Speed (owner: "a bit too fast", 2026-10-21).** `window.ARCADEHUB_GAME_SPEED = 0.8` in `index.html`. The cap above now allows `60 x speed` game steps a second (48 at 0.8), so the players, ball and physics move at 0.8x on any screen (measured 48 steps a second at 50, 60, 75, 90, 120, 144, 165 and 240 Hz). Change the number to fine-tune it: 1 = original speed, 0.9 a little slower, 0.7 slower still. Values above 1 can't go faster than the screen refreshes. Below 1 the picture updates a bit less often (48 times a second at 0.8), which is barely visible.
 - Nothing else was changed.
 
 ## Controls

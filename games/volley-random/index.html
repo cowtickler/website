@@ -30,12 +30,15 @@
     <!-- ArcadeHub: like Basket Random and Soccer Random (same developer and engine), the game's physics moves a fixed
          1/60 s per screen refresh, so on 120 Hz or 144 Hz screens it would run 2 to 2.4 times too fast.
          This lets the game run at most 60 times a second, like on a normal 60 Hz screen (copied from
-         games/basket-random). It changes nothing on 60 Hz screens. -->
+         games/basket-random). It changes nothing on 60 Hz screens.
+         ARCADEHUB_GAME_SPEED slows the game down: the owner found it a bit too fast (2026-10-21), so it runs
+         60 x speed game steps a second. 1 = original speed; use 0.5 to 1 (above 1 a 60 Hz screen can't keep up). -->
     <script>
+    window.ARCADEHUB_GAME_SPEED = 0.8;
     (function () {
         var raf = window.requestAnimationFrame.bind(window);
         var caf = window.cancelAnimationFrame.bind(window);
-        var step = 1000 / 60, next = 0, frameTime = -1, ids = {}, count = 0;
+        var step = 1000 / (60 * window.ARCADEHUB_GAME_SPEED), next = 0, frameTime = -1, ids = {}, count = 0;
         window.requestAnimationFrame = function (callback) {
             var id = ++count;
             function run(t) {

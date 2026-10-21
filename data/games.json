@@ -1439,6 +1439,42 @@
         "author": "Famobi",
         "license": "None (copyrighted; unofficial copy)"
       }
+    },
+    {
+      "categories": ["arcade"],
+      "tags": ["snake", "retro", "classic"],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        { "keys": "Arrow keys or WASD", "action": "Turn the snake" },
+        { "keys": "Swipe", "action": "Turn the snake on a touch screen" },
+        { "keys": "Click or tap", "action": "Play, change the settings, play again" }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-21",
+      "status": "ready",
+      "id": "google-snake",
+      "title": "Google Snake",
+      "description": "Google's Snake game: eat apples to grow longer without hitting the walls or your own tail. Pick the speed, board size and number of apples before you play.",
+      "thumbnail": "assets/thumbnails/google-snake.webp",
+      "entry": "games/google-snake/index.html",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "light",
+        "lowEnd": "unknown",
+        "notes": "A copy of Google's Snake doodle game from 77pen.github.io (the game framed by soccerrandomx.bitbucket.io), with Google's art, sounds, icons and font stored alongside it, hosted at the owner's request. Google's logging, ad and translate calls are switched off and the page cannot contact other websites."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "Google",
+        "license": "None (copyrighted by Google; unofficial copy)"
+      }
     }
   ]
 }

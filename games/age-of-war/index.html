@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- ArcadeHub: the Content-Security-Policy below stops the game from contacting other websites
+         (ads, analytics, the publisher's branding server). -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+    <title>Age of War</title>
+    <meta name="robots" content="noindex,nofollow" />
+
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
+
+</head>
+
+<body>
+    <div id="content"></div>
+    <div id="loader">Loading ...</div>
+    <script type="text/javascript">
+        var gameName = "age-of-war.min.js";
+        // ArcadeHub: makes the game's loader read its branding/site-lock lists from this folder
+        // (assets/json/, all empty) instead of the publisher's server cdn.fbrq.io. The
+        // Content-Security-Policy blocks that server, and a blocked request froze the loader.
+        window.fbrqSA = true;
+
+
+
+
+
+
+        //This all here is for cache busting;
+        function addScript(src, buster, callback) {
+            var s = document.createElement('script');
+            s.setAttribute('src', src + '?v=' + buster);
+            if (typeof callback === 'function') {
+                s.onload = callback;
+            }
+            document.body.appendChild(s);
+        }
+
+
+        addScript('version.js', Date.now(), function() {
+
+            addScript(gameName, version, function() {
+                var game = new AgeOfWar.Game();
+                //something
+            });
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1519,6 +1519,38 @@
         "author": "Louissi / Max Games (HTML5 version published by Azerion)",
         "license": "None (copyrighted game; unofficial copy)"
       }
+    },
+    {
+      "id": "stack-ball",
+      "title": "Stack Ball",
+      "description": "Smash your ball down through the spinning tower of colored rings. Hold to crash through, but let go before you hit a black ring.",
+      "categories": ["arcade"],
+      "tags": ["3d", "casual", "levels", "one button"],
+      "thumbnail": "assets/thumbnails/stack-ball.webp",
+      "entry": "games/stack-ball/index.html",
+      "aspectRatio": "9:16",
+      "input": { "keyboard": false, "touch": true, "mouse": true, "gamepad": false },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        { "keys": "Click / tap", "action": "Start a level" },
+        { "keys": "Hold mouse button / finger", "action": "Smash down through the rings; let go before a black ring" }
+      ],
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "A copy of the Unity WebGL game (Stack Ball 2 by DMA / Roro8) from 77pen.github.io (the game framed by soccerrandomx.bitbucket.io), hosted at the owner's request. Needs WebGL; about 7 MB to download and 256 MB of memory while playing. Ads removed; no trackers."
+      },
+      "isolation": "standard",
+      "source": {
+        "type": "third-party",
+        "author": "DMA / Roro8",
+        "license": "None (all rights reserved); hosted at owner's request",
+        "licenseUrl": "games/stack-ball/ARCADEHUB_NOTES.md"
+      },
+      "added": "2026-10-21",
+      "status": "ready"
     }
   ]
 }

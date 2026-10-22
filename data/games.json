@@ -1699,6 +1699,68 @@
       },
       "added": "2026-10-22",
       "status": "ready"
+    },
+    {
+      "id": "rooftop-snipers",
+      "title": "Rooftop Snipers",
+      "description": "Two pixel gunmen on a rooftop. Jump to dodge, raise your weapon and shoot your opponent off the edge. Play against the computer or a friend on one keyboard.",
+      "categories": [
+        "action"
+      ],
+      "tags": [
+        "2 player",
+        "shooter",
+        "pixel art",
+        "physics"
+      ],
+      "thumbnail": "assets/thumbnails/rooftop-snipers.webp",
+      "entry": "games/rooftop-snipers/index.html",
+      "aspectRatio": "16:9",
+      "input": {
+        "keyboard": true,
+        "touch": false,
+        "mouse": true,
+        "gamepad": false
+      },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "W",
+          "action": "Player 1 (red): jump"
+        },
+        {
+          "keys": "E (hold, then let go)",
+          "action": "Player 1 (red): raise weapon, then shoot"
+        },
+        {
+          "keys": "I",
+          "action": "Player 2 (blue): jump"
+        },
+        {
+          "keys": "O (hold, then let go)",
+          "action": "Player 2 (blue): raise weapon, then shoot"
+        },
+        {
+          "keys": "Mouse",
+          "action": "Menus"
+        }
+      ],
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "A copy of the Unity WebGL game (Rooftop Snipers by New Eich Games / Michael Eichler) from 77pen.github.io (the game framed by soccerrandomx.bitbucket.io), hosted at the owner's request. Needs WebGL and a keyboard; about 8.6 MB to download and 256 MB of memory while playing. No ads; Unity's analytics are blocked."
+      },
+      "isolation": "standard",
+      "source": {
+        "type": "third-party",
+        "author": "New Eich Games (Michael Eichler)",
+        "license": "None (all rights reserved); hosted at owner's request",
+        "licenseUrl": "games/rooftop-snipers/ARCADEHUB_NOTES.md"
+      },
+      "added": "2026-10-22",
+      "status": "ready"
     }
   ]
 }

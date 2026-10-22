@@ -1598,6 +1598,53 @@
         "author": "Halfbrick Studios",
         "license": "None (copyrighted Halfbrick game; unofficial copy)"
       }
+    },
+    {
+      "id": "getaway-shootout",
+      "title": "Getaway Shootout",
+      "description": "Race a rival (or a friend on the same keyboard) to the getaway across trucks, trains and rooftops. Hold a button to turn, let go to jump, and grab guns and power-ups on the way. First to 3 getaways wins.",
+      "categories": [
+        "action",
+        "arcade"
+      ],
+      "tags": [
+        "2 player",
+        "pixel",
+        "shooting",
+        "local multiplayer"
+      ],
+      "thumbnail": "assets/thumbnails/getaway-shootout.webp",
+      "entry": "games/getaway-shootout/index.html",
+      "aspectRatio": "16:10",
+      "input": {
+        "keyboard": true,
+        "touch": false,
+        "mouse": true,
+        "gamepad": false
+      },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        { "keys": "W / E", "action": "Player 1: hold to turn, let go to jump left / right" },
+        { "keys": "R", "action": "Player 1: use power-up" },
+        { "keys": "I / O", "action": "Player 2: hold to turn, let go to jump left / right" },
+        { "keys": "P", "action": "Player 2: use power-up" }
+      ],
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "A copy of New Eich Games' Unity WebGL game (Poki build) from 77pen.github.io (the game framed by soccerrandomx.bitbucket.io), hosted at the owner's request. Needs WebGL; about 19 MB to download and 256 MB of memory while playing. Poki's ad SDK is replaced by a local no-ads stand-in and the page cannot contact other websites."
+      },
+      "isolation": "standard",
+      "source": {
+        "type": "third-party",
+        "author": "New Eich Games",
+        "license": "None (all rights reserved); hosted at owner's request",
+        "licenseUrl": "games/getaway-shootout/ARCADEHUB_NOTES.md"
+      },
+      "added": "2026-10-22",
+      "status": "ready"
     }
   ]
 }

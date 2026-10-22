@@ -1645,6 +1645,60 @@
       },
       "added": "2026-10-22",
       "status": "ready"
+    },
+    {
+      "id": "tunnel-rush",
+      "title": "Tunnel Rush",
+      "description": "Race down a spinning, colorful tunnel at ever-faster speed. Rotate left and right to dodge the walls and barriers in your way.",
+      "categories": [
+        "action",
+        "arcade"
+      ],
+      "tags": [
+        "3d",
+        "endless runner",
+        "reflex"
+      ],
+      "thumbnail": "assets/thumbnails/tunnel-rush.webp",
+      "entry": "games/tunnel-rush/index.html",
+      "aspectRatio": "16:9",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Left / Right arrow keys",
+          "action": "Rotate around the tunnel to dodge obstacles"
+        },
+        {
+          "keys": "On-screen arrows (touch or click)",
+          "action": "Rotate left / right"
+        },
+        {
+          "keys": "Click / tap",
+          "action": "Menus, pause and play again"
+        }
+      ],
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "A copy of the Unity WebGL game (Tunnel Rush by Royale Gamers) from 77pen.github.io (the game framed by soccerrandomx.bitbucket.io), hosted at the owner's request. Needs WebGL; about 13 MB to download and 256 MB of memory while playing. No ads in the build; Unity's analytics are blocked and the page cannot contact other websites."
+      },
+      "isolation": "standard",
+      "source": {
+        "type": "third-party",
+        "author": "Royale Gamers",
+        "license": "None (all rights reserved); hosted at owner's request",
+        "licenseUrl": "games/tunnel-rush/ARCADEHUB_NOTES.md"
+      },
+      "added": "2026-10-22",
+      "status": "ready"
     }
   ]
 }

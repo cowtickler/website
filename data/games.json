@@ -1761,6 +1761,66 @@
       },
       "added": "2026-10-22",
       "status": "ready"
+    },
+    {
+      "categories": [
+        "action",
+        "arcade"
+      ],
+      "tags": [
+        "survivor",
+        "roguelite",
+        "pokemon",
+        "pixel art"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "WASD or arrow keys",
+          "action": "Move (your Pokémon attacks on its own)"
+        },
+        {
+          "keys": "1 2 3 4, or Q / E",
+          "action": "Pick or cycle the active move"
+        },
+        {
+          "keys": "Esc or P",
+          "action": "Pause"
+        },
+        {
+          "keys": "Drag anywhere (touch)",
+          "action": "Move with the on-screen joystick"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-22",
+      "status": "ready",
+      "id": "pokesurvivor",
+      "title": "PokéSurvivor",
+      "description": "A free Pokémon fan game in the Survivor.io style: pick a partner, survive the hordes, level up your moves and take on legendaries. Play as a guest.",
+      "thumbnail": "assets/thumbnails/pokesurvivor.webp",
+      "entry": "games/pokesurvivor/index.html",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": true,
+        "gamepad": true
+      },
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "A copy of JPTER78's game from its public GitHub source, hosted at the owner's request. Guest play only: accounts, cloud saves, rankings and co-op only work on pokesurvivor.com, so the game runs in its local mode and talks to no other website. No ads. Sprites load as you meet each Pokémon (about 75 MB in total)."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "JPTER78 (Jonathan Piera Torregrosa)",
+        "authorUrl": "https://pokesurvivor.com/",
+        "repository": "https://github.com/JPTER78/pokesurvivor",
+        "license": "PolyForm Noncommercial 1.0.0 (code); CC BY-NC 4.0 (SpriteCollab sprites)",
+        "licenseUrl": "games/pokesurvivor/LICENSE"
+      }
     }
   ]
 }

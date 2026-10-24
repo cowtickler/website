@@ -1821,6 +1821,63 @@
         "license": "PolyForm Noncommercial 1.0.0 (code); CC BY-NC 4.0 (SpriteCollab sprites)",
         "licenseUrl": "games/pokesurvivor/LICENSE"
       }
+    },
+    {
+      "categories": [
+        "strategy"
+      ],
+      "tags": [
+        "tower defense",
+        "pokemon",
+        "pixel art"
+      ],
+      "fullscreen": true,
+      "featured": false,
+      "popular": false,
+      "controls": [
+        {
+          "keys": "Mouse click / tap",
+          "action": "Place, move and upgrade your Pokémon towers"
+        },
+        {
+          "keys": "Space",
+          "action": "Start the next wave"
+        },
+        {
+          "keys": "1-9",
+          "action": "Pick a Pokémon from your team"
+        },
+        {
+          "keys": "Esc",
+          "action": "Close menus / pause"
+        }
+      ],
+      "isolation": "standard",
+      "added": "2026-10-24",
+      "status": "ready",
+      "id": "pokepath-td",
+      "title": "PokéPath TD",
+      "description": "A Pokémon fan tower defense game: catch Pokémon, place them along the route and stop every wave. Progress saves in this browser.",
+      "thumbnail": "assets/thumbnails/pokepath-td.webp",
+      "entry": "games/pokepath-td/index.html",
+      "input": {
+        "keyboard": true,
+        "touch": true,
+        "mouse": true,
+        "gamepad": false
+      },
+      "compatibility": {
+        "performance": "medium",
+        "lowEnd": "unknown",
+        "notes": "A copy of Khydra's fan game (web version 1.3.6), hosted at the owner's request. Made for a mouse; taps work as clicks. Saves stay in this browser. No ads, and it talks to no other website. About 32 MB."
+      },
+      "source": {
+        "type": "third-party",
+        "author": "Khydra",
+        "authorUrl": "https://khydra98.itch.io/pokepath",
+        "license": "None (all rights reserved); hosted at owner's request",
+        "licenseUrl": "games/pokepath-td/ARCADEHUB_NOTES.md"
+      }
     }
   ]
 }
